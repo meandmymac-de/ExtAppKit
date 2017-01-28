@@ -6,6 +6,8 @@
 //  Copyright © 2015 Thomas Bonk Softwareentwicklung / meandmymac.de. All rights reserved.
 //
 
+import Foundation
+
 extension String {
 
     public var lastPathComponent: String {
