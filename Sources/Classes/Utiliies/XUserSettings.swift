@@ -11,11 +11,11 @@ import Foundation
 /**
     Convenient class for managing the user defaults.
 */
-open class XUserSettings {
+open class XUserSettings: NSObject {
 
     // MARK: Initialization
 
-    public init() {
+    public override init() {
 
         // EMPTY BY DESIGN
     }
