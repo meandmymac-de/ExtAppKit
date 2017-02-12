@@ -2,10 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-<<<<<<< HEAD
-      location = "self:ExtAppKit.xcodeproj">
-=======
       location = "self:">
->>>>>>> 1aea436dabf0c6f2b25a72c7762442ee0a2e7ecd
    </FileRef>
 </Workspace>
