@@ -12,6 +12,6 @@ public protocol XEventProtocol {
     
 }
 
-public enum XNoEvents: XEventProtocol {
+public enum NoEvents: XEventProtocol {
 
 }

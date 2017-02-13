@@ -19,8 +19,8 @@
 		B361DA901E518CE800CA2848 /* XEventProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B361DA8E1E518CE800CA2848 /* XEventProtocol.swift */; };
 		B361DA911E518CE800CA2848 /* XEventProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B361DA8E1E518CE800CA2848 /* XEventProtocol.swift */; };
 		B361DA921E518CE800CA2848 /* XEventProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B361DA8E1E518CE800CA2848 /* XEventProtocol.swift */; };
-		B361DA9A1E518DCD00CA2848 /* ExtAppKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B361DA991E518DCD00CA2848 /* ExtAppKitTests.swift */; };
 		B361DA9C1E518DCD00CA2848 /* ExtAppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BBB55AD41C8F88F20050DDA9 /* ExtAppKit.framework */; };
+		B361DAA31E51C35D00CA2848 /* StateMachineTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B361DAA21E51C35D00CA2848 /* StateMachineTests.swift */; };
 		E9044B5B1E3CE9FB002917C5 /* XStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9044B451E3CE9FB002917C5 /* XStack.swift */; };
 		E9044B5C1E3CE9FB002917C5 /* XStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9044B451E3CE9FB002917C5 /* XStack.swift */; };
 		E9044B5D1E3CE9FB002917C5 /* XStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9044B451E3CE9FB002917C5 /* XStack.swift */; };
@@ -118,8 +118,8 @@
 		B361DA891E518CBA00CA2848 /* XStateProcol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XStateProcol.swift; sourceTree = "<group>"; };
 		B361DA8E1E518CE800CA2848 /* XEventProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XEventProtocol.swift; sourceTree = "<group>"; };
 		B361DA971E518DCD00CA2848 /* ExtAppKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ExtAppKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		B361DA991E518DCD00CA2848 /* ExtAppKitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtAppKitTests.swift; sourceTree = "<group>"; };
 		B361DA9B1E518DCD00CA2848 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B361DAA21E51C35D00CA2848 /* StateMachineTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StateMachineTests.swift; sourceTree = "<group>"; };
 		BBB55AB21C8F80020050DDA9 /* ExtAppKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ExtAppKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BBB55ACC1C8F80660050DDA9 /* version.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = version.xcconfig; sourceTree = "<group>"; };
 		BBB55AD41C8F88F20050DDA9 /* ExtAppKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ExtAppKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -201,7 +201,7 @@
 		B361DA981E518DCD00CA2848 /* ExtAppKitTests */ = {
 			isa = PBXGroup;
 			children = (
-				B361DA991E518DCD00CA2848 /* ExtAppKitTests.swift */,
+				B361DAA21E51C35D00CA2848 /* StateMachineTests.swift */,
 				B361DA9B1E518DCD00CA2848 /* Info.plist */,
 			);
 			path = ExtAppKitTests;
@@ -532,7 +532,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B361DA9A1E518DCD00CA2848 /* ExtAppKitTests.swift in Sources */,
+				B361DAA31E51C35D00CA2848 /* StateMachineTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -959,6 +959,7 @@
 				B361DAA11E518DCD00CA2848 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		BBB55AAC1C8F80020050DDA9 /* Build configuration list for PBXProject "ExtAppKit" */ = {
 			isa = XCConfigurationList;
