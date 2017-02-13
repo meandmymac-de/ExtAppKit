@@ -21,6 +21,10 @@
 		B361DA921E518CE800CA2848 /* XEventProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B361DA8E1E518CE800CA2848 /* XEventProtocol.swift */; };
 		B361DA9C1E518DCD00CA2848 /* ExtAppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BBB55AD41C8F88F20050DDA9 /* ExtAppKit.framework */; };
 		B361DAA31E51C35D00CA2848 /* StateMachineTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B361DAA21E51C35D00CA2848 /* StateMachineTests.swift */; };
+		B3F426D41E51D5F2001B5849 /* XStateMachineTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3F426D31E51D5F2001B5849 /* XStateMachineTransition.swift */; };
+		B3F426D51E51D5F2001B5849 /* XStateMachineTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3F426D31E51D5F2001B5849 /* XStateMachineTransition.swift */; };
+		B3F426D61E51D5F2001B5849 /* XStateMachineTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3F426D31E51D5F2001B5849 /* XStateMachineTransition.swift */; };
+		B3F426D71E51D5F2001B5849 /* XStateMachineTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3F426D31E51D5F2001B5849 /* XStateMachineTransition.swift */; };
 		E9044B5B1E3CE9FB002917C5 /* XStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9044B451E3CE9FB002917C5 /* XStack.swift */; };
 		E9044B5C1E3CE9FB002917C5 /* XStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9044B451E3CE9FB002917C5 /* XStack.swift */; };
 		E9044B5D1E3CE9FB002917C5 /* XStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9044B451E3CE9FB002917C5 /* XStack.swift */; };
@@ -120,6 +124,7 @@
 		B361DA971E518DCD00CA2848 /* ExtAppKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ExtAppKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B361DA9B1E518DCD00CA2848 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B361DAA21E51C35D00CA2848 /* StateMachineTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StateMachineTests.swift; sourceTree = "<group>"; };
+		B3F426D31E51D5F2001B5849 /* XStateMachineTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XStateMachineTransition.swift; sourceTree = "<group>"; };
 		BBB55AB21C8F80020050DDA9 /* ExtAppKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ExtAppKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BBB55ACC1C8F80660050DDA9 /* version.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = version.xcconfig; sourceTree = "<group>"; };
 		BBB55AD41C8F88F20050DDA9 /* ExtAppKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ExtAppKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -192,6 +197,7 @@
 			isa = PBXGroup;
 			children = (
 				B361DA841E518C4800CA2848 /* XStateMachine.swift */,
+				B3F426D31E51D5F2001B5849 /* XStateMachineTransition.swift */,
 				B361DA891E518CBA00CA2848 /* XStateProcol.swift */,
 				B361DA8E1E518CE800CA2848 /* XEventProtocol.swift */,
 			);
@@ -553,6 +559,7 @@
 				E9044B6F1E3CE9FB002917C5 /* DoThis.swift in Sources */,
 				B361DA8A1E518CBA00CA2848 /* XStateProcol.swift in Sources */,
 				E9044B6B1E3CE9FB002917C5 /* XCommandBusError.swift in Sources */,
+				B3F426D41E51D5F2001B5849 /* XStateMachineTransition.swift in Sources */,
 				E9044BB11E3CEA07002917C5 /* NSDate+StripTime.swift in Sources */,
 				B361DA851E518C4800CA2848 /* XStateMachine.swift in Sources */,
 				B361DA8F1E518CE800CA2848 /* XEventProtocol.swift in Sources */,
@@ -583,6 +590,7 @@
 				E9044B701E3CE9FB002917C5 /* DoThis.swift in Sources */,
 				B361DA8B1E518CBA00CA2848 /* XStateProcol.swift in Sources */,
 				E9044B6C1E3CE9FB002917C5 /* XCommandBusError.swift in Sources */,
+				B3F426D51E51D5F2001B5849 /* XStateMachineTransition.swift in Sources */,
 				E9044BB21E3CEA07002917C5 /* NSDate+StripTime.swift in Sources */,
 				B361DA861E518C4800CA2848 /* XStateMachine.swift in Sources */,
 				B361DA901E518CE800CA2848 /* XEventProtocol.swift in Sources */,
@@ -613,6 +621,7 @@
 				E9044B711E3CE9FB002917C5 /* DoThis.swift in Sources */,
 				B361DA8C1E518CBA00CA2848 /* XStateProcol.swift in Sources */,
 				E9044B6D1E3CE9FB002917C5 /* XCommandBusError.swift in Sources */,
+				B3F426D61E51D5F2001B5849 /* XStateMachineTransition.swift in Sources */,
 				E9044BB31E3CEA07002917C5 /* NSDate+StripTime.swift in Sources */,
 				B361DA871E518C4800CA2848 /* XStateMachine.swift in Sources */,
 				B361DA911E518CE800CA2848 /* XEventProtocol.swift in Sources */,
@@ -643,6 +652,7 @@
 				E9044B721E3CE9FB002917C5 /* DoThis.swift in Sources */,
 				B361DA8D1E518CBA00CA2848 /* XStateProcol.swift in Sources */,
 				E9044B6E1E3CE9FB002917C5 /* XCommandBusError.swift in Sources */,
+				B3F426D71E51D5F2001B5849 /* XStateMachineTransition.swift in Sources */,
 				E9044BB41E3CEA07002917C5 /* NSDate+StripTime.swift in Sources */,
 				B361DA881E518C4800CA2848 /* XStateMachine.swift in Sources */,
 				B361DA921E518CE800CA2848 /* XEventProtocol.swift in Sources */,

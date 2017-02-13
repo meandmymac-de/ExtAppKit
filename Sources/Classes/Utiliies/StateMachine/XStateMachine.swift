@@ -10,6 +10,11 @@ import Foundation
 
 public class XStateMachine<S: XStateProtocol, E: XEventProtocol> {
     
+    // MARK: - Private Properties
+    
+    private var _transitions = [XStateMachineTransition<S, E>]()
+    
+    
     // MARK: - Public Typealiases
     
     /*!
@@ -44,6 +49,17 @@ public class XStateMachine<S: XStateProtocol, E: XEventProtocol> {
         
         self.state = initialState
     }
+    
+    
+    // MARK: - Define State Machine
+    
+    public func addTransition(from: States, to: States) {
+        enter()
+        
+        let transition = XStateMachineTransition<States, Events>(from: from, to: to)
+        
+        self._transitions.append(transition)
+    }
 }
 
 
@@ -58,6 +74,9 @@ public class XStateMachine<S: XStateProtocol, E: XEventProtocol> {
 public func +=<S: XStateProtocol, E: XEventProtocol>(left: XStateMachine<S, E>, right: (S, S)) {
     enter()
     
+    let (fromState, toState) = right
+    
+    left.addTransition(from: fromState, to: toState)
 }
 
 
