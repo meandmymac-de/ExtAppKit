@@ -7,6 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B361DA851E518C4800CA2848 /* XStateMachine.swift in Sources */ = {isa = PBXBuildFile; fileRef = B361DA841E518C4800CA2848 /* XStateMachine.swift */; };
+		B361DA861E518C4800CA2848 /* XStateMachine.swift in Sources */ = {isa = PBXBuildFile; fileRef = B361DA841E518C4800CA2848 /* XStateMachine.swift */; };
+		B361DA871E518C4800CA2848 /* XStateMachine.swift in Sources */ = {isa = PBXBuildFile; fileRef = B361DA841E518C4800CA2848 /* XStateMachine.swift */; };
+		B361DA881E518C4800CA2848 /* XStateMachine.swift in Sources */ = {isa = PBXBuildFile; fileRef = B361DA841E518C4800CA2848 /* XStateMachine.swift */; };
+		B361DA8A1E518CBA00CA2848 /* XStateProcol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B361DA891E518CBA00CA2848 /* XStateProcol.swift */; };
+		B361DA8B1E518CBA00CA2848 /* XStateProcol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B361DA891E518CBA00CA2848 /* XStateProcol.swift */; };
+		B361DA8C1E518CBA00CA2848 /* XStateProcol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B361DA891E518CBA00CA2848 /* XStateProcol.swift */; };
+		B361DA8D1E518CBA00CA2848 /* XStateProcol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B361DA891E518CBA00CA2848 /* XStateProcol.swift */; };
+		B361DA8F1E518CE800CA2848 /* XEventProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B361DA8E1E518CE800CA2848 /* XEventProtocol.swift */; };
+		B361DA901E518CE800CA2848 /* XEventProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B361DA8E1E518CE800CA2848 /* XEventProtocol.swift */; };
+		B361DA911E518CE800CA2848 /* XEventProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B361DA8E1E518CE800CA2848 /* XEventProtocol.swift */; };
+		B361DA921E518CE800CA2848 /* XEventProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B361DA8E1E518CE800CA2848 /* XEventProtocol.swift */; };
+		B361DA9A1E518DCD00CA2848 /* ExtAppKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B361DA991E518DCD00CA2848 /* ExtAppKitTests.swift */; };
+		B361DA9C1E518DCD00CA2848 /* ExtAppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BBB55AD41C8F88F20050DDA9 /* ExtAppKit.framework */; };
 		E9044B5B1E3CE9FB002917C5 /* XStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9044B451E3CE9FB002917C5 /* XStack.swift */; };
 		E9044B5C1E3CE9FB002917C5 /* XStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9044B451E3CE9FB002917C5 /* XStack.swift */; };
 		E9044B5D1E3CE9FB002917C5 /* XStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9044B451E3CE9FB002917C5 /* XStack.swift */; };
@@ -89,7 +103,23 @@
 		E9044BC11E3CEA15002917C5 /* XOperators.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9044BBD1E3CEA15002917C5 /* XOperators.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		B361DA9D1E518DCD00CA2848 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BBB55AA91C8F80020050DDA9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BBB55AD31C8F88F20050DDA9;
+			remoteInfo = "ExtAppKit-macOS";
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		B361DA841E518C4800CA2848 /* XStateMachine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XStateMachine.swift; sourceTree = "<group>"; };
+		B361DA891E518CBA00CA2848 /* XStateProcol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XStateProcol.swift; sourceTree = "<group>"; };
+		B361DA8E1E518CE800CA2848 /* XEventProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XEventProtocol.swift; sourceTree = "<group>"; };
+		B361DA971E518DCD00CA2848 /* ExtAppKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ExtAppKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B361DA991E518DCD00CA2848 /* ExtAppKitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtAppKitTests.swift; sourceTree = "<group>"; };
+		B361DA9B1E518DCD00CA2848 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BBB55AB21C8F80020050DDA9 /* ExtAppKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ExtAppKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BBB55ACC1C8F80660050DDA9 /* version.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = version.xcconfig; sourceTree = "<group>"; };
 		BBB55AD41C8F88F20050DDA9 /* ExtAppKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ExtAppKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -119,6 +149,14 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		B361DA941E518DCD00CA2848 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B361DA9C1E518DCD00CA2848 /* ExtAppKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		BBB55AAE1C8F80020050DDA9 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -150,11 +188,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B361DA831E518C3000CA2848 /* StateMachine */ = {
+			isa = PBXGroup;
+			children = (
+				B361DA841E518C4800CA2848 /* XStateMachine.swift */,
+				B361DA891E518CBA00CA2848 /* XStateProcol.swift */,
+				B361DA8E1E518CE800CA2848 /* XEventProtocol.swift */,
+			);
+			path = StateMachine;
+			sourceTree = "<group>";
+		};
+		B361DA981E518DCD00CA2848 /* ExtAppKitTests */ = {
+			isa = PBXGroup;
+			children = (
+				B361DA991E518DCD00CA2848 /* ExtAppKitTests.swift */,
+				B361DA9B1E518DCD00CA2848 /* Info.plist */,
+			);
+			path = ExtAppKitTests;
+			sourceTree = "<group>";
+		};
 		BBB55AA81C8F80020050DDA9 = {
 			isa = PBXGroup;
 			children = (
 				BBB55AB41C8F80020050DDA9 /* Sources */,
 				E9044B421E3CE87C002917C5 /* Resources */,
+				B361DA981E518DCD00CA2848 /* ExtAppKitTests */,
 				BBB55AB31C8F80020050DDA9 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -166,6 +224,7 @@
 				BBB55AD41C8F88F20050DDA9 /* ExtAppKit.framework */,
 				BBB55AF11C8F8BE00050DDA9 /* ExtAppKit.framework */,
 				BBB55AFE1C8F8CBB0050DDA9 /* ExtAppKit.framework */,
+				B361DA971E518DCD00CA2848 /* ExtAppKitTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -219,6 +278,7 @@
 			isa = PBXGroup;
 			children = (
 				E9044B491E3CE9FB002917C5 /* CommandBus */,
+				B361DA831E518C3000CA2848 /* StateMachine */,
 				E9044B4D1E3CE9FB002917C5 /* DoThis.swift */,
 				E9044B531E3CE9FB002917C5 /* XAssociatedObjects.swift */,
 				E9044B541E3CE9FB002917C5 /* XCache.swift */,
@@ -288,6 +348,24 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		B361DA961E518DCD00CA2848 /* ExtAppKitTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B361DA9F1E518DCD00CA2848 /* Build configuration list for PBXNativeTarget "ExtAppKitTests" */;
+			buildPhases = (
+				B361DA931E518DCD00CA2848 /* Sources */,
+				B361DA941E518DCD00CA2848 /* Frameworks */,
+				B361DA951E518DCD00CA2848 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B361DA9E1E518DCD00CA2848 /* PBXTargetDependency */,
+			);
+			name = ExtAppKitTests;
+			productName = ExtAppKitTests;
+			productReference = B361DA971E518DCD00CA2848 /* ExtAppKitTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		BBB55AB11C8F80020050DDA9 /* ExtAppKit-iOS */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = BBB55AC61C8F80020050DDA9 /* Build configuration list for PBXNativeTarget "ExtAppKit-iOS" */;
@@ -366,10 +444,15 @@
 		BBB55AA91C8F80020050DDA9 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0730;
+				LastSwiftUpdateCheck = 0820;
 				LastUpgradeCheck = 0810;
-				ORGANIZATIONNAME = "Károly Lőrentey";
+				ORGANIZATIONNAME = "Thomas Bonk Softwareentwicklung";
 				TargetAttributes = {
+					B361DA961E518DCD00CA2848 = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = GQE994U6EG;
+						ProvisioningStyle = Automatic;
+					};
 					BBB55AB11C8F80020050DDA9 = {
 						CreatedOnToolsVersion = 7.3;
 						LastSwiftMigration = 0800;
@@ -401,11 +484,19 @@
 				BBB55AD31C8F88F20050DDA9 /* ExtAppKit-macOS */,
 				BBB55AF01C8F8BE00050DDA9 /* ExtAppKit-watchOS */,
 				BBB55AFD1C8F8CBB0050DDA9 /* ExtAppKit-tvOS */,
+				B361DA961E518DCD00CA2848 /* ExtAppKitTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		B361DA951E518DCD00CA2848 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		BBB55AB01C8F80020050DDA9 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -437,6 +528,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		B361DA931E518DCD00CA2848 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B361DA9A1E518DCD00CA2848 /* ExtAppKitTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		BBB55AAD1C8F80020050DDA9 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -452,8 +551,11 @@
 				E9044B831E3CE9FB002917C5 /* XAssociatedObjects.swift in Sources */,
 				E9044BBE1E3CEA15002917C5 /* XOperators.swift in Sources */,
 				E9044B6F1E3CE9FB002917C5 /* DoThis.swift in Sources */,
+				B361DA8A1E518CBA00CA2848 /* XStateProcol.swift in Sources */,
 				E9044B6B1E3CE9FB002917C5 /* XCommandBusError.swift in Sources */,
 				E9044BB11E3CEA07002917C5 /* NSDate+StripTime.swift in Sources */,
+				B361DA851E518C4800CA2848 /* XStateMachine.swift in Sources */,
+				B361DA8F1E518CE800CA2848 /* XEventProtocol.swift in Sources */,
 				E9044B8B1E3CE9FB002917C5 /* XConversionFunctions.swift in Sources */,
 				E9044B871E3CE9FB002917C5 /* XCache.swift in Sources */,
 				E9044B631E3CE9FB002917C5 /* XCommand.swift in Sources */,
@@ -479,8 +581,11 @@
 				E9044B841E3CE9FB002917C5 /* XAssociatedObjects.swift in Sources */,
 				E9044BBF1E3CEA15002917C5 /* XOperators.swift in Sources */,
 				E9044B701E3CE9FB002917C5 /* DoThis.swift in Sources */,
+				B361DA8B1E518CBA00CA2848 /* XStateProcol.swift in Sources */,
 				E9044B6C1E3CE9FB002917C5 /* XCommandBusError.swift in Sources */,
 				E9044BB21E3CEA07002917C5 /* NSDate+StripTime.swift in Sources */,
+				B361DA861E518C4800CA2848 /* XStateMachine.swift in Sources */,
+				B361DA901E518CE800CA2848 /* XEventProtocol.swift in Sources */,
 				E9044B8C1E3CE9FB002917C5 /* XConversionFunctions.swift in Sources */,
 				E9044B881E3CE9FB002917C5 /* XCache.swift in Sources */,
 				E9044B641E3CE9FB002917C5 /* XCommand.swift in Sources */,
@@ -506,8 +611,11 @@
 				E9044B851E3CE9FB002917C5 /* XAssociatedObjects.swift in Sources */,
 				E9044BC01E3CEA15002917C5 /* XOperators.swift in Sources */,
 				E9044B711E3CE9FB002917C5 /* DoThis.swift in Sources */,
+				B361DA8C1E518CBA00CA2848 /* XStateProcol.swift in Sources */,
 				E9044B6D1E3CE9FB002917C5 /* XCommandBusError.swift in Sources */,
 				E9044BB31E3CEA07002917C5 /* NSDate+StripTime.swift in Sources */,
+				B361DA871E518C4800CA2848 /* XStateMachine.swift in Sources */,
+				B361DA911E518CE800CA2848 /* XEventProtocol.swift in Sources */,
 				E9044B8D1E3CE9FB002917C5 /* XConversionFunctions.swift in Sources */,
 				E9044B891E3CE9FB002917C5 /* XCache.swift in Sources */,
 				E9044B651E3CE9FB002917C5 /* XCommand.swift in Sources */,
@@ -533,8 +641,11 @@
 				E9044B861E3CE9FB002917C5 /* XAssociatedObjects.swift in Sources */,
 				E9044BC11E3CEA15002917C5 /* XOperators.swift in Sources */,
 				E9044B721E3CE9FB002917C5 /* DoThis.swift in Sources */,
+				B361DA8D1E518CBA00CA2848 /* XStateProcol.swift in Sources */,
 				E9044B6E1E3CE9FB002917C5 /* XCommandBusError.swift in Sources */,
 				E9044BB41E3CEA07002917C5 /* NSDate+StripTime.swift in Sources */,
+				B361DA881E518C4800CA2848 /* XStateMachine.swift in Sources */,
+				B361DA921E518CE800CA2848 /* XEventProtocol.swift in Sources */,
 				E9044B8E1E3CE9FB002917C5 /* XConversionFunctions.swift in Sources */,
 				E9044B8A1E3CE9FB002917C5 /* XCache.swift in Sources */,
 				E9044B661E3CE9FB002917C5 /* XCommand.swift in Sources */,
@@ -547,7 +658,50 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		B361DA9E1E518DCD00CA2848 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BBB55AD31C8F88F20050DDA9 /* ExtAppKit-macOS */;
+			targetProxy = B361DA9D1E518DCD00CA2848 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		B361DAA01E518DCD00CA2848 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = GQE994U6EG;
+				INFOPLIST_FILE = ExtAppKitTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				PRODUCT_BUNDLE_IDENTIFIER = de.meandmymac.ExtAppKitTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		B361DAA11E518DCD00CA2848 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = GQE994U6EG;
+				INFOPLIST_FILE = ExtAppKitTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				PRODUCT_BUNDLE_IDENTIFIER = de.meandmymac.ExtAppKitTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
 		BBB55AC41C8F80020050DDA9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = BBB55ACC1C8F80660050DDA9 /* version.xcconfig */;
@@ -798,6 +952,14 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		B361DA9F1E518DCD00CA2848 /* Build configuration list for PBXNativeTarget "ExtAppKitTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B361DAA01E518DCD00CA2848 /* Debug */,
+				B361DAA11E518DCD00CA2848 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		BBB55AAC1C8F80020050DDA9 /* Build configuration list for PBXProject "ExtAppKit" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
