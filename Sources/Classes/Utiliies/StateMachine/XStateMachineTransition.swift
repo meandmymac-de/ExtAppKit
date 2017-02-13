@@ -8,7 +8,7 @@
 
 import Foundation
 
-internal class XStateMachineTransition<S: XStateProtocol, E: XEventProtocol> {
+internal class XStateMachineTransition<S: XStateType, E: XEventType> {
     
     // MARK: - Public Properties
     

@@ -9,6 +9,12 @@
 import XCTest
 import ExtAppKit
 
+enum States: Int, XStateType {
+    case State0 = 0
+    case State1 = 1
+    case State2 = 2
+}
+
 class StateMachineTests: XCTestCase {
 
     override func setUp() {
@@ -23,17 +29,33 @@ class StateMachineTests: XCTestCase {
 
     func testTransition() {
         
-        enum States: Int, XStateProtocol {
-            case State0 = 0
-            case State1 = 1
-        }
-        
         let stateMachine = XStateMachine<States, NoEvents>(initialState: .State0)
         
         stateMachine += (.State0, .State1)
-        try! stateMachine => .State1
-        
-        XCTAssert(stateMachine.state == .State1, "State Machine is not in .State1")
+
+        do {
+
+            try stateMachine => .State1
+            XCTAssert(stateMachine.state == .State1, "State Machine is not in .State1")
+        }
+        catch {
+
+            XCTFail("State Machine threw error while transitioning from .State0 to .State1")
+        }
+    }
+
+    func testTransitionFails() {
+
+        let stateMachine = XStateMachine<States, NoEvents>(initialState: .State0)
+
+        stateMachine += (.State0, .State1)
+
+        do {
+
+            try stateMachine => .State2
+            XCTFail("State Machine didn't threw error while transitioning from .State0 to .State2")
+        }
+        catch {}
     }
 
     func testPerformanceExample() {

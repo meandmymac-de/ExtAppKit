@@ -8,12 +8,15 @@
 
 import Foundation
 
-public class XStateMachine<S: XStateProtocol, E: XEventProtocol> {
-    
-    // MARK: - Private Properties
-    
-    private var _transitions = [XStateMachineTransition<S, E>]()
-    
+
+public enum XStateMachineError: Error {
+
+    case NoTransition
+    case NonDeterministic
+}
+
+
+public class XStateMachine<S: XStateType, E: XEventType> {
     
     // MARK: - Public Typealiases
     
@@ -26,6 +29,11 @@ public class XStateMachine<S: XStateProtocol, E: XEventProtocol> {
         Type alias for the events
      */
     public typealias Events = E
+
+
+    // MARK: - Private Properties
+
+    private var _transitions = [XStateMachineTransition<States, Events>]()
     
     
     // MARK: - Public Properties
@@ -52,13 +60,62 @@ public class XStateMachine<S: XStateProtocol, E: XEventProtocol> {
     
     
     // MARK: - Define State Machine
-    
+
+    /*!
+        Adds a transtion from one state to another.
+
+        @param from
+                    The source state
+        @param from
+                    The target state
+     */
     public func addTransition(from: States, to: States) {
         enter()
         
         let transition = XStateMachineTransition<States, Events>(from: from, to: to)
         
         self._transitions.append(transition)
+    }
+
+
+    // MARK: - State Transitions
+
+    /*!
+        Tries to transition the state machine to the given state. Throws an 
+        error, if there is no transition from the current state to the given
+        state.
+
+        @param toState
+                    The target state
+     
+        @throws XStateMachineError.NoTransition 
+                    if there is no transition to the target state
+        @throws XStateMachineError.NonDeterministic
+                    if there is more than one transition
+
+     */
+    public func tryTransition(toState: States) throws {
+        enter()
+
+        let transitions = self._transitions.filter { transition in
+
+            return transition.fromState == self.state
+        }
+
+        guard transitions.count > 0 else {
+            throw XStateMachineError.NoTransition
+        }
+
+        guard transitions.count < 2 else {
+            throw XStateMachineError.NonDeterministic
+        }
+
+        let trans = transitions.first!
+        guard trans.fromState == self.state && trans.toState == toState else {
+            throw XStateMachineError.NoTransition
+        }
+
+        self.state = transitions.first!.toState
     }
 }
 
@@ -71,13 +128,14 @@ public class XStateMachine<S: XStateProtocol, E: XEventProtocol> {
     @param right
                 A tupel consisting of two state with (fromState, toState).
  */
-public func +=<S: XStateProtocol, E: XEventProtocol>(left: XStateMachine<S, E>, right: (S, S)) {
+public func +=<S: XStateType, E: XEventType>(left: XStateMachine<S, E>, right: (S, S)) {
     enter()
     
     let (fromState, toState) = right
     
     left.addTransition(from: fromState, to: toState)
 }
+
 
 
 /*!
@@ -93,7 +151,8 @@ public func +=<S: XStateProtocol, E: XEventProtocol>(left: XStateMachine<S, E>, 
                 The new state of the state machine.
  */
 infix operator =>
-public func =><S: XStateProtocol, E: XEventProtocol>(left: XStateMachine<S, E>, right: S) throws {
+public func =><S: XStateType, E: XEventType>(left: XStateMachine<S, E>, right: S) throws {
     enter()
-    
+
+    try left.tryTransition(toState: right)
 }
