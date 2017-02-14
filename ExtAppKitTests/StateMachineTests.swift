@@ -10,9 +10,15 @@ import XCTest
 import ExtAppKit
 
 enum States: Int, XStateType {
+
     case State0 = 0
     case State1 = 1
     case State2 = 2
+}
+
+enum Events: Int, XEventType {
+
+    case Event0 = 0
 }
 
 class StateMachineTests: XCTestCase {
@@ -83,5 +89,29 @@ class StateMachineTests: XCTestCase {
             XCTFail("State Machine didn't threw error while transitioning from .State0 to .State2")
         }
         catch {}
+    }
+
+    func testTransitionOnEvent() {
+
+        let stateMachine = XStateMachine<States, Events>(initialState: .State0)
+
+        do {
+
+            try stateMachine += (.Event0, .State0, .State1)
+        }
+        catch {
+
+            XCTFail("State Machine threw error while defining transitioning from .State0 to .State1 in case of event .Event0")
+        }
+
+        do {
+
+            try .Event0 => stateMachine
+            XCTAssert(stateMachine.state == .State1, "State Machine is not in .State1")
+        }
+        catch {
+
+            XCTFail("State Machine threw error while transitioning from .State0 to .State1")
+        }
     }
 }

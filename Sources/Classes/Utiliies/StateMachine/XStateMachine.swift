@@ -68,6 +68,9 @@ public class XStateMachine<S: XStateType, E: XEventType> {
                     The source state
         @param from
                     The target state
+     
+        @throws XStateMachineError.NonDeterministic
+                    if there is more than one transition
      */
     public func addTransition(from: States, to: States) throws {
         enter()
@@ -81,6 +84,26 @@ public class XStateMachine<S: XStateType, E: XEventType> {
         let transition = XStateMachineTransition<States, Events>(from: from, to: to)
         
         self._transitions.append(transition)
+    }
+
+    /*!
+        Adds a transtion from one state to another that is taken when the given
+        event is fired.
+
+        @param from
+                    The source state
+        @param from
+                    The target state
+        @param event
+                    The event that triggers the transition
+
+        @throws XStateMachineError.NonDeterministic
+                    if there is more than one transition with the given source 
+                    and target states for the event
+     */
+    public func addTransition(from: States, to: States, forEvent event: Events) throws {
+        enter()
+
     }
 
 
@@ -153,6 +176,26 @@ public func +=<S: XStateType, E: XEventType>(left: XStateMachine<S, E>, right: (
     try left.addTransition(from: fromState, to: toState)
 }
 
+/*!
+    Adds a transition from one state to another takes is taken, if the given
+    event is fired.
+ 
+    @abstract This operator throws an error if the transition to the new state
+                already exists.
+
+    @param left
+                The state machien to which the transition shall be added.
+    @param right
+                A tupel consisting of two state with (event, fromState, toState).
+ */
+public func +=<S: XStateType, E: XEventType>(left: XStateMachine<S, E>, right: (E, S, S)) throws {
+    enter()
+
+    let (event, fromState, toState) = right
+
+    try left.addTransition(from: fromState, to: toState, forEvent: event)
+}
+
 
 
 /*!
@@ -172,4 +215,21 @@ public func =><S: XStateType, E: XEventType>(left: XStateMachine<S, E>, right: S
     enter()
 
     try left.tryTransition(toState: right)
+}
+
+/*!
+    Triggers a transition for the given event.
+
+    @abstract This operator throws an error if the event can't be fired in the 
+                current state.
+
+    @param left
+                The event to be fired
+    @param right
+                The state machinw to to which the state transition shall be
+                applied.
+ */
+public func =><S: XStateType, E: XEventType>(left: E, right: XStateMachine<S, E>) throws {
+    enter()
+
 }
