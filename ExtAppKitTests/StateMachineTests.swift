@@ -30,8 +30,15 @@ class StateMachineTests: XCTestCase {
     func testTransition() {
         
         let stateMachine = XStateMachine<States, NoEvents>(initialState: .State0)
-        
-        stateMachine += (.State0, .State1)
+
+        do {
+
+            try stateMachine += (.State0, .State1)
+        }
+        catch {
+
+            XCTFail("State Machine threw error while defining transitioning from .State0 to .State1")
+        }
 
         do {
 
@@ -44,11 +51,31 @@ class StateMachineTests: XCTestCase {
         }
     }
 
+    func testNonDeterministicTransition() {
+
+        let stateMachine = XStateMachine<States, NoEvents>(initialState: .State0)
+
+        do {
+
+            try stateMachine += (.State0, .State1)
+            try stateMachine += (.State0, .State1)
+            XCTFail("State Machine didn't throw error while defining transitioning from .State0 to .State1 twice")
+        }
+        catch {}
+    }
+
     func testTransitionFails() {
 
         let stateMachine = XStateMachine<States, NoEvents>(initialState: .State0)
 
-        stateMachine += (.State0, .State1)
+        do {
+
+            try stateMachine += (.State0, .State1)
+        }
+        catch {
+
+            XCTFail("State Machine threw error while defining transitioning from .State0 to .State1")
+        }
 
         do {
 
@@ -57,12 +84,4 @@ class StateMachineTests: XCTestCase {
         }
         catch {}
     }
-
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
-    }
-
 }

@@ -69,9 +69,15 @@ public class XStateMachine<S: XStateType, E: XEventType> {
         @param from
                     The target state
      */
-    public func addTransition(from: States, to: States) {
+    public func addTransition(from: States, to: States) throws {
         enter()
-        
+
+        let transitions = self.transitions(from: from, to: to)
+
+        guard transitions.count == 0 else {
+            throw XStateMachineError.NonDeterministic
+        }
+
         let transition = XStateMachineTransition<States, Events>(from: from, to: to)
         
         self._transitions.append(transition)
@@ -97,10 +103,7 @@ public class XStateMachine<S: XStateType, E: XEventType> {
     public func tryTransition(toState: States) throws {
         enter()
 
-        let transitions = self._transitions.filter { transition in
-
-            return transition.fromState == self.state
-        }
+        let transitions = self.transitions(from: self.state, to: toState)
 
         guard transitions.count > 0 else {
             throw XStateMachineError.NoTransition
@@ -117,6 +120,20 @@ public class XStateMachine<S: XStateType, E: XEventType> {
 
         self.state = transitions.first!.toState
     }
+
+
+    // MARK: - Private Methods
+
+    private func transitions(from: States, to: States) -> [XStateMachineTransition<States, Events>] {
+        enter()
+
+        let transitions = self._transitions.filter { transition in
+
+            return transition.fromState == from && transition.toState == to
+        }
+
+        return transitions
+    }
 }
 
 
@@ -128,12 +145,12 @@ public class XStateMachine<S: XStateType, E: XEventType> {
     @param right
                 A tupel consisting of two state with (fromState, toState).
  */
-public func +=<S: XStateType, E: XEventType>(left: XStateMachine<S, E>, right: (S, S)) {
+public func +=<S: XStateType, E: XEventType>(left: XStateMachine<S, E>, right: (S, S)) throws {
     enter()
     
     let (fromState, toState) = right
     
-    left.addTransition(from: fromState, to: toState)
+    try left.addTransition(from: fromState, to: toState)
 }
 
 
