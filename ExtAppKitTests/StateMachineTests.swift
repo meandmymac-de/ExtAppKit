@@ -19,6 +19,7 @@ enum States: Int, XStateType {
 enum Events: Int, XEventType {
 
     case Event0 = 0
+    case Event1 = 1
 }
 
 class StateMachineTests: XCTestCase {
@@ -113,5 +114,26 @@ class StateMachineTests: XCTestCase {
 
             XCTFail("State Machine threw error while transitioning from .State0 to .State1")
         }
+    }
+    
+    func testTransitionOnEventFail() {
+        
+        let stateMachine = XStateMachine<States, Events>(initialState: .State0)
+        
+        do {
+            
+            try stateMachine += (.Event0, .State0, .State1)
+        }
+        catch {
+            
+            XCTFail("State Machine threw error while defining transitioning from .State0 to .State1 in case of event .Event0")
+        }
+        
+        do {
+            
+            try .Event1 => stateMachine
+            XCTFail("State Machine transitioned on event .Event1 allthough it shouldn't")
+        }
+        catch {}
     }
 }

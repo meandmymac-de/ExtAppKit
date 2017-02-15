@@ -29,12 +29,31 @@ public class XStateMachine<S: XStateType, E: XEventType> {
         Type alias for the events
      */
     public typealias Events = E
+    
+    /*!
+        Context that is passed to a state or event handler. A context is a tupel
+        with the following components:
+        - State Machine instance
+        - Event (ilable) that was fired
+        - From State
+        - To State
+        - User Info object (nilable)
+     */
+    public typealias Context = (XStateMachine<S, E>, Events?, States, States, Any?)
+    
+    /*!
+        Signature for a transition handler that expects a context as parameter.
+     */
+    public typealias TransitionHandler = (Context) -> Void
 
 
     // MARK: - Private Properties
 
     private var _transitions = [XStateMachineTransition<States, Events>]()
-    private var _events = [Events: [XStateMachineTransition<States, Events>]]()
+    private var _events = [Events:[XStateMachineTransition<States, Events>]]()
+    private var _enterStateHandlers = [States:[TransitionHandler]]()
+    private var _leaveStateHandlers = [States:[TransitionHandler]]()
+    private var _eventHandlers = [Events:[TransitionHandler]]()
     
     
     // MARK: - Public Properties
@@ -121,6 +140,48 @@ public class XStateMachine<S: XStateType, E: XEventType> {
         
         eventTransitions?.append(transition)
         self._events[event] = eventTransitions
+    }
+    
+    public func addEnterStateHandler(state: States, handler: @escaping TransitionHandler) {
+        enter()
+        
+        var handlers = self._enterStateHandlers[state]
+        
+        if handlers == nil {
+            
+            handlers = [TransitionHandler]()
+        }
+        
+        handlers!.append(handler)
+        self._enterStateHandlers[state] = handlers
+    }
+    
+    public func addLeaveStateHandler(state: States, handler: @escaping TransitionHandler) {
+        enter()
+        
+        var handlers = self._leaveStateHandlers[state]
+        
+        if handlers == nil {
+            
+            handlers = [TransitionHandler]()
+        }
+        
+        handlers!.append(handler)
+        self._leaveStateHandlers[state] = handlers
+    }
+    
+    public func addEventHandler(event: Events, handler: @escaping TransitionHandler) {
+        enter()
+        
+        var handlers = self._eventHandlers[event]
+        
+        if handlers == nil {
+            
+            handlers = [TransitionHandler]()
+        }
+        
+        handlers!.append(handler)
+        self._eventHandlers[event] = handlers
     }
 
 
@@ -279,6 +340,13 @@ public func +=<S: XStateType, E: XEventType>(left: XStateMachine<S, E>, right: (
 }
 
 
+// MARK: - Operator
+
+infix operator =>
+infix operator >+
+infix operator +>
+infix operator <+>
+
 
 /*!
     Triggers a transition to the given state.
@@ -292,7 +360,7 @@ public func +=<S: XStateType, E: XEventType>(left: XStateMachine<S, E>, right: (
     @param right
                 The new state of the state machine.
  */
-infix operator =>
+
 public func =><S: XStateType, E: XEventType>(left: XStateMachine<S, E>, right: S) throws {
     enter()
 
@@ -315,4 +383,28 @@ public func =><S: XStateType, E: XEventType>(left: E, right: XStateMachine<S, E>
     enter()
 
     try right.tryEvent(left)
+}
+
+public func >+<S: XStateType, E: XEventType>(left: (XStateMachine<S, E>, S), right: @escaping XStateMachine<S, E>.TransitionHandler) {
+    enter()
+    
+    let (stateMachine, state) = left
+    
+    stateMachine.addEnterStateHandler(state: state, handler: right)
+}
+
+public func +><S: XStateType, E: XEventType>(left: (XStateMachine<S, E>, S), right: @escaping XStateMachine<S, E>.TransitionHandler) {
+    enter()
+    
+    let (stateMachine, state) = left
+    
+    stateMachine.addLeaveStateHandler(state: state, handler: right)
+}
+
+public func <+><S: XStateType, E: XEventType>(left: (XStateMachine<S, E>, E), right: @escaping XStateMachine<S, E>.TransitionHandler) {
+    enter()
+    
+    let (stateMachine, event) = left
+    
+    stateMachine.addEventHandler(event: event, handler: right)
 }
