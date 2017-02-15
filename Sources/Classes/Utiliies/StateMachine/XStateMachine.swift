@@ -34,6 +34,7 @@ public class XStateMachine<S: XStateType, E: XEventType> {
     // MARK: - Private Properties
 
     private var _transitions = [XStateMachineTransition<States, Events>]()
+    private var _events = [Events: [XStateMachineTransition<States, Events>]]()
     
     
     // MARK: - Public Properties
@@ -104,6 +105,22 @@ public class XStateMachine<S: XStateType, E: XEventType> {
     public func addTransition(from: States, to: States, forEvent event: Events) throws {
         enter()
 
+        var eventTransitions = self._events[event]
+        let transitions = self.searchTransitions(inTransitions: eventTransitions, from: from, to: to)
+        
+        guard transitions.count == 0 else {
+            throw XStateMachineError.NonDeterministic
+        }
+        
+        let transition = XStateMachineTransition<States, Events>(from: from, to: to)
+        
+        if eventTransitions == nil {
+            
+            eventTransitions = [XStateMachineTransition<States, Events>]()
+        }
+        
+        eventTransitions?.append(transition)
+        self._events[event] = eventTransitions
     }
 
 
@@ -141,21 +158,86 @@ public class XStateMachine<S: XStateType, E: XEventType> {
             throw XStateMachineError.NoTransition
         }
 
-        self.state = transitions.first!.toState
+        self.state = trans.toState
+    }
+    
+    /*!
+        Tries to transition from the current state to the next state by firing
+        the given event.
+     
+        @param event
+                    The event that shall be fired
+     
+        @throws XStateMachineError.NoTransition
+                    if there is no transition to the target state
+        @throws XStateMachineError.NonDeterministic
+                    if there is more than one transition
+     */
+    public func tryEvent(_ event: Events) throws {
+        enter()
+        
+        let eventTransitions = self._events[event]
+        let transitions = self.searchTransitions(inTransitions: eventTransitions, from: self.state)
+        
+        guard transitions.count > 0 else {
+            throw XStateMachineError.NoTransition
+        }
+        
+        guard transitions.count < 2 else {
+            throw XStateMachineError.NonDeterministic
+        }
+        
+        let trans = transitions.first!
+        
+        self.state = trans.toState
     }
 
 
     // MARK: - Private Methods
+    
+    private func searchTransitions(inTransitions: [XStateMachineTransition<States, Events>]?,
+                                   _ included: (XStateMachineTransition<States, Events>) -> Bool) -> [XStateMachineTransition<States, Events>] {
+        enter()
+        
+        guard let _ = inTransitions else {
+            
+            return [XStateMachineTransition<States, Events>]()
+        }
+        
+        let transitions = inTransitions!.filter(included)
+        
+        return transitions
+    }
+    
+    private func searchTransitions(inTransitions: [XStateMachineTransition<States, Events>]?,
+                                   from: States) -> [XStateMachineTransition<States, Events>] {
+        enter()
+        
+        let transitions = self.searchTransitions(inTransitions: inTransitions) { transition in
+            
+            return transition.fromState == from
+        }
+        
+        return transitions
+    }
+    
+    private func searchTransitions(inTransitions: [XStateMachineTransition<States, Events>]?,
+                                   from: States,
+                                   to: States) -> [XStateMachineTransition<States, Events>] {
+        enter()
+        
+        let transitions = self.searchTransitions(inTransitions: inTransitions) { transition in
+            
+            return transition.fromState == from && transition.toState == to
+        }
+        
+        return transitions
+    }
 
     private func transitions(from: States, to: States) -> [XStateMachineTransition<States, Events>] {
         enter()
-
-        let transitions = self._transitions.filter { transition in
-
-            return transition.fromState == from && transition.toState == to
-        }
-
-        return transitions
+        
+        return self.searchTransitions(inTransitions: self._transitions, from: from, to: to)
     }
 }
 
@@ -232,4 +314,5 @@ public func =><S: XStateType, E: XEventType>(left: XStateMachine<S, E>, right: S
 public func =><S: XStateType, E: XEventType>(left: E, right: XStateMachine<S, E>) throws {
     enter()
 
+    try right.tryEvent(left)
 }
