@@ -31,20 +31,9 @@ public class XStateMachine<S: XStateType, E: XEventType> {
     public typealias Events = E
     
     /*!
-        Context that is passed to a state or event handler. A context is a tupel
-        with the following components:
-        - State Machine instance
-        - Event (ilable) that was fired
-        - From State
-        - To State
-        - User Info object (nilable)
-     */
-    public typealias Context = (XStateMachine<S, E>, Events?, States, States, Any?)
-    
-    /*!
         Signature for a transition handler that expects a context as parameter.
      */
-    public typealias TransitionHandler = (Context) -> Void
+    public typealias TransitionHandler = (XStateMachine<States, Events>, Events?, States, States, Any?) -> Void
 
 
     // MARK: - Private Properties
@@ -62,6 +51,11 @@ public class XStateMachine<S: XStateType, E: XEventType> {
         The current state of the stae machine
      */
     public private(set) var state: States
+
+    /*!
+        The user info object
+     */
+    public var userInfo: Any? = nil
     
     
     // MARK: - Initialization
@@ -141,7 +135,15 @@ public class XStateMachine<S: XStateType, E: XEventType> {
         eventTransitions?.append(transition)
         self._events[event] = eventTransitions
     }
-    
+
+    /*!
+        Adds a handler to a state that is called when the state is entered.
+     
+        @param state
+                    The state for which the handle shall be added
+        @param handler
+                    The handler
+     */
     public func addEnterStateHandler(state: States, handler: @escaping TransitionHandler) {
         enter()
         
@@ -219,7 +221,11 @@ public class XStateMachine<S: XStateType, E: XEventType> {
             throw XStateMachineError.NoTransition
         }
 
+        self.callHandlers(self._leaveStateHandlers[self.state], nil, self.state, toState)
+
         self.state = trans.toState
+
+        self.callHandlers(self._enterStateHandlers[self.state], nil, self.state, toState)
     }
     
     /*!
@@ -250,11 +256,27 @@ public class XStateMachine<S: XStateType, E: XEventType> {
         
         let trans = transitions.first!
         
+        self.callHandlers(self._leaveStateHandlers[self.state], event, self.state, trans.toState)
+        self.callHandlers(self._eventHandlers[event], event, self.state, trans.toState)
+
         self.state = trans.toState
+
+        self.callHandlers(self._enterStateHandlers[self.state], event, self.state, trans.toState)
     }
 
 
     // MARK: - Private Methods
+
+    private func callHandlers(_ handlerList: [TransitionHandler]?, _ event: Events?, _ from: States, _ to: States) {
+
+        if let handlers = handlerList {
+
+            handlers.forEach{ handler in
+
+                handler(self, event, from, to, self.userInfo)
+            }
+        }
+    }
     
     private func searchTransitions(inTransitions: [XStateMachineTransition<States, Events>]?,
                                    _ included: (XStateMachineTransition<States, Events>) -> Bool) -> [XStateMachineTransition<States, Events>] {
