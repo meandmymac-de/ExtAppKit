@@ -43,9 +43,20 @@ public class XStateMachine<S: XStateType, E: XEventType> {
     private var _enterStateHandlers = [States:[TransitionHandler]]()
     private var _leaveStateHandlers = [States:[TransitionHandler]]()
     private var _eventHandlers = [Events:[TransitionHandler]]()
+    private var _performer = performBackgroundAsync
     
     
     // MARK: - Public Properties
+    
+    /*!
+        Call handlers in background or foreground
+     */
+    public var backgroundHandlers: Bool = true {
+        didSet {
+            
+            self._performer = self.backgroundHandlers ? performBackgroundAsync : performAsync
+        }
+    }
     
     /*!
         The current state of the stae machine
@@ -88,7 +99,7 @@ public class XStateMachine<S: XStateType, E: XEventType> {
      */
     public func addTransition(from: States, to: States) throws {
         enter()
-
+    
         let transitions = self.transitions(from: from, to: to)
 
         guard transitions.count == 0 else {
@@ -273,7 +284,10 @@ public class XStateMachine<S: XStateType, E: XEventType> {
 
             handlers.forEach{ handler in
 
-                handler(self, event, from, to, self.userInfo)
+                self._performer {
+                
+                    handler(self, event, from, to, self.userInfo)
+                }
             }
         }
     }
