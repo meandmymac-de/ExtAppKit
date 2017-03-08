@@ -105,6 +105,7 @@
 		E9044BBF1E3CEA15002917C5 /* XOperators.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9044BBD1E3CEA15002917C5 /* XOperators.swift */; };
 		E9044BC01E3CEA15002917C5 /* XOperators.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9044BBD1E3CEA15002917C5 /* XOperators.swift */; };
 		E9044BC11E3CEA15002917C5 /* XOperators.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9044BBD1E3CEA15002917C5 /* XOperators.swift */; };
+		E95B7ACA1E70AE19000A905E /* ApplicationServicesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E95B7AC91E70AE19000A905E /* ApplicationServicesManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -151,6 +152,7 @@
 		E9044BA71E3CEA07002917C5 /* String+Matches.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Matches.swift"; sourceTree = "<group>"; };
 		E9044BA81E3CEA07002917C5 /* String+Path.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Path.swift"; sourceTree = "<group>"; };
 		E9044BBD1E3CEA15002917C5 /* XOperators.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XOperators.swift; sourceTree = "<group>"; };
+		E95B7AC91E70AE19000A905E /* ApplicationServicesManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApplicationServicesManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -286,6 +288,7 @@
 				E9044B491E3CE9FB002917C5 /* CommandBus */,
 				B361DA831E518C3000CA2848 /* StateMachine */,
 				E9044B4D1E3CE9FB002917C5 /* DoThis.swift */,
+				E95B7AC91E70AE19000A905E /* ApplicationServicesManager.swift */,
 				E9044B531E3CE9FB002917C5 /* XAssociatedObjects.swift */,
 				E9044B541E3CE9FB002917C5 /* XCache.swift */,
 				E9044B551E3CE9FB002917C5 /* XConversionFunctions.swift */,
@@ -570,6 +573,7 @@
 				E9044B9B1E3CE9FB002917C5 /* XTypedNotification.swift in Sources */,
 				E9044BB51E3CEA07002917C5 /* String+Matches.swift in Sources */,
 				E9044B5B1E3CE9FB002917C5 /* XStack.swift in Sources */,
+				E95B7ACA1E70AE19000A905E /* ApplicationServicesManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
