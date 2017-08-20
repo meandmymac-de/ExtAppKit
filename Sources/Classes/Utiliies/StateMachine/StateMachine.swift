@@ -1,5 +1,5 @@
 //
-//  XStateMachine.swift
+//  StateMachine.swift
 //  ExtAppKit
 //
 //  Created by Bonk, Thomas on 13.02.17.
@@ -9,14 +9,14 @@
 import Foundation
 
 
-public enum XStateMachineError: Error {
+public enum StateMachineError: Error {
 
     case NoTransition
     case NonDeterministic
 }
 
 
-public class XStateMachine<S: XStateType, E: XEventType> {
+public class StateMachine<S: StateType, E: EventType> {
     
     // MARK: - Public Typealiases
     
@@ -33,13 +33,13 @@ public class XStateMachine<S: XStateType, E: XEventType> {
     /*!
         Signature for a transition handler that expects a context as parameter.
      */
-    public typealias TransitionHandler = (XStateMachine<States, Events>, Events?, States, States, Any?) -> Void
+    public typealias TransitionHandler = (StateMachine<States, Events>, Events?, States, States, Any?) -> Void
 
 
     // MARK: - Private Properties
 
-    private var _transitions = [XStateMachineTransition<States, Events>]()
-    private var _events = [Events:[XStateMachineTransition<States, Events>]]()
+    private var _transitions = [StateMachineTransition<States, Events>]()
+    private var _events = [Events:[StateMachineTransition<States, Events>]]()
     private var _enterStateHandlers = [States:[TransitionHandler]]()
     private var _leaveStateHandlers = [States:[TransitionHandler]]()
     private var _eventHandlers = [Events:[TransitionHandler]]()
@@ -94,7 +94,7 @@ public class XStateMachine<S: XStateType, E: XEventType> {
         @param from
                     The target state
      
-        @throws XStateMachineError.NonDeterministic
+        @throws StateMachineError.NonDeterministic
                     if there is more than one transition
      */
     public func addTransition(from: States, to: States) throws {
@@ -103,10 +103,10 @@ public class XStateMachine<S: XStateType, E: XEventType> {
         let transitions = self.transitions(from: from, to: to)
 
         guard transitions.count == 0 else {
-            throw XStateMachineError.NonDeterministic
+            throw StateMachineError.NonDeterministic
         }
 
-        let transition = XStateMachineTransition<States, Events>(from: from, to: to)
+        let transition = StateMachineTransition<States, Events>(from: from, to: to)
         
         self._transitions.append(transition)
     }
@@ -122,7 +122,7 @@ public class XStateMachine<S: XStateType, E: XEventType> {
         @param event
                     The event that triggers the transition
 
-        @throws XStateMachineError.NonDeterministic
+        @throws StateMachineError.NonDeterministic
                     if there is more than one transition with the given source 
                     and target states for the event
      */
@@ -133,14 +133,14 @@ public class XStateMachine<S: XStateType, E: XEventType> {
         let transitions = self.searchTransitions(inTransitions: eventTransitions, from: from, to: to)
         
         guard transitions.count == 0 else {
-            throw XStateMachineError.NonDeterministic
+            throw StateMachineError.NonDeterministic
         }
         
-        let transition = XStateMachineTransition<States, Events>(from: from, to: to)
+        let transition = StateMachineTransition<States, Events>(from: from, to: to)
         
         if eventTransitions == nil {
             
-            eventTransitions = [XStateMachineTransition<States, Events>]()
+            eventTransitions = [StateMachineTransition<States, Events>]()
         }
         
         eventTransitions?.append(transition)
@@ -208,9 +208,9 @@ public class XStateMachine<S: XStateType, E: XEventType> {
         @param toState
                     The target state
      
-        @throws XStateMachineError.NoTransition 
+        @throws StateMachineError.NoTransition 
                     if there is no transition to the target state
-        @throws XStateMachineError.NonDeterministic
+        @throws StateMachineError.NonDeterministic
                     if there is more than one transition
 
      */
@@ -220,16 +220,16 @@ public class XStateMachine<S: XStateType, E: XEventType> {
         let transitions = self.transitions(from: self.state, to: toState)
 
         guard transitions.count > 0 else {
-            throw XStateMachineError.NoTransition
+            throw StateMachineError.NoTransition
         }
 
         guard transitions.count < 2 else {
-            throw XStateMachineError.NonDeterministic
+            throw StateMachineError.NonDeterministic
         }
 
         let trans = transitions.first!
         guard trans.fromState == self.state && trans.toState == toState else {
-            throw XStateMachineError.NoTransition
+            throw StateMachineError.NoTransition
         }
 
         self.callHandlers(self._leaveStateHandlers[self.state], nil, self.state, toState)
@@ -246,9 +246,9 @@ public class XStateMachine<S: XStateType, E: XEventType> {
         @param event
                     The event that shall be fired
      
-        @throws XStateMachineError.NoTransition
+        @throws StateMachineError.NoTransition
                     if there is no transition to the target state
-        @throws XStateMachineError.NonDeterministic
+        @throws StateMachineError.NonDeterministic
                     if there is more than one transition
      */
     public func tryEvent(_ event: Events) throws {
@@ -258,11 +258,11 @@ public class XStateMachine<S: XStateType, E: XEventType> {
         let transitions = self.searchTransitions(inTransitions: eventTransitions, from: self.state)
         
         guard transitions.count > 0 else {
-            throw XStateMachineError.NoTransition
+            throw StateMachineError.NoTransition
         }
         
         guard transitions.count < 2 else {
-            throw XStateMachineError.NonDeterministic
+            throw StateMachineError.NonDeterministic
         }
         
         let trans = transitions.first!
@@ -292,13 +292,13 @@ public class XStateMachine<S: XStateType, E: XEventType> {
         }
     }
     
-    private func searchTransitions(inTransitions: [XStateMachineTransition<States, Events>]?,
-                                   _ included: (XStateMachineTransition<States, Events>) -> Bool) -> [XStateMachineTransition<States, Events>] {
+    private func searchTransitions(inTransitions: [StateMachineTransition<States, Events>]?,
+                                   _ included: (StateMachineTransition<States, Events>) -> Bool) -> [StateMachineTransition<States, Events>] {
         enter()
         
         guard let _ = inTransitions else {
             
-            return [XStateMachineTransition<States, Events>]()
+            return [StateMachineTransition<States, Events>]()
         }
         
         let transitions = inTransitions!.filter(included)
@@ -306,8 +306,8 @@ public class XStateMachine<S: XStateType, E: XEventType> {
         return transitions
     }
     
-    private func searchTransitions(inTransitions: [XStateMachineTransition<States, Events>]?,
-                                   from: States) -> [XStateMachineTransition<States, Events>] {
+    private func searchTransitions(inTransitions: [StateMachineTransition<States, Events>]?,
+                                   from: States) -> [StateMachineTransition<States, Events>] {
         enter()
         
         let transitions = self.searchTransitions(inTransitions: inTransitions) { transition in
@@ -318,9 +318,9 @@ public class XStateMachine<S: XStateType, E: XEventType> {
         return transitions
     }
     
-    private func searchTransitions(inTransitions: [XStateMachineTransition<States, Events>]?,
+    private func searchTransitions(inTransitions: [StateMachineTransition<States, Events>]?,
                                    from: States,
-                                   to: States) -> [XStateMachineTransition<States, Events>] {
+                                   to: States) -> [StateMachineTransition<States, Events>] {
         enter()
         
         let transitions = self.searchTransitions(inTransitions: inTransitions) { transition in
@@ -331,7 +331,7 @@ public class XStateMachine<S: XStateType, E: XEventType> {
         return transitions
     }
 
-    private func transitions(from: States, to: States) -> [XStateMachineTransition<States, Events>] {
+    private func transitions(from: States, to: States) -> [StateMachineTransition<States, Events>] {
         enter()
         
         return self.searchTransitions(inTransitions: self._transitions, from: from, to: to)
@@ -347,7 +347,7 @@ public class XStateMachine<S: XStateType, E: XEventType> {
     @param right
                 A tupel consisting of two state with (fromState, toState).
  */
-public func +=<S: XStateType, E: XEventType>(left: XStateMachine<S, E>, right: (S, S)) throws {
+public func +=<S: StateType, E: EventType>(left: StateMachine<S, E>, right: (S, S)) throws {
     enter()
     
     let (fromState, toState) = right
@@ -367,7 +367,7 @@ public func +=<S: XStateType, E: XEventType>(left: XStateMachine<S, E>, right: (
     @param right
                 A tupel consisting of two state with (event, fromState, toState).
  */
-public func +=<S: XStateType, E: XEventType>(left: XStateMachine<S, E>, right: (E, S, S)) throws {
+public func +=<S: StateType, E: EventType>(left: StateMachine<S, E>, right: (E, S, S)) throws {
     enter()
 
     let (event, fromState, toState) = right
@@ -397,7 +397,7 @@ infix operator <+>
                 The new state of the state machine.
  */
 
-public func =><S: XStateType, E: XEventType>(left: XStateMachine<S, E>, right: S) throws {
+public func =><S: StateType, E: EventType>(left: StateMachine<S, E>, right: S) throws {
     enter()
 
     try left.tryTransition(toState: right)
@@ -415,13 +415,13 @@ public func =><S: XStateType, E: XEventType>(left: XStateMachine<S, E>, right: S
                 The state machinw to to which the state transition shall be
                 applied.
  */
-public func =><S: XStateType, E: XEventType>(left: E, right: XStateMachine<S, E>) throws {
+public func =><S: StateType, E: EventType>(left: E, right: StateMachine<S, E>) throws {
     enter()
 
     try right.tryEvent(left)
 }
 
-public func >+<S: XStateType, E: XEventType>(left: (XStateMachine<S, E>, S), right: @escaping XStateMachine<S, E>.TransitionHandler) {
+public func >+<S: StateType, E: EventType>(left: (StateMachine<S, E>, S), right: @escaping StateMachine<S, E>.TransitionHandler) {
     enter()
     
     let (stateMachine, state) = left
@@ -429,7 +429,7 @@ public func >+<S: XStateType, E: XEventType>(left: (XStateMachine<S, E>, S), rig
     stateMachine.addEnterStateHandler(state: state, handler: right)
 }
 
-public func +><S: XStateType, E: XEventType>(left: (XStateMachine<S, E>, S), right: @escaping XStateMachine<S, E>.TransitionHandler) {
+public func +><S: StateType, E: EventType>(left: (StateMachine<S, E>, S), right: @escaping StateMachine<S, E>.TransitionHandler) {
     enter()
     
     let (stateMachine, state) = left
@@ -437,7 +437,7 @@ public func +><S: XStateType, E: XEventType>(left: (XStateMachine<S, E>, S), rig
     stateMachine.addLeaveStateHandler(state: state, handler: right)
 }
 
-public func <+><S: XStateType, E: XEventType>(left: (XStateMachine<S, E>, E), right: @escaping XStateMachine<S, E>.TransitionHandler) {
+public func <+><S: StateType, E: EventType>(left: (StateMachine<S, E>, E), right: @escaping StateMachine<S, E>.TransitionHandler) {
     enter()
     
     let (stateMachine, event) = left

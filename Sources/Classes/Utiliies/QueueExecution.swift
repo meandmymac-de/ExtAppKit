@@ -1,5 +1,5 @@
 //
-//  XQueueExecution.swift
+//  QueueExecution.swift
 //  ExtAppKit
 //
 //  Created by Thomas Bonk on 28.09.14.

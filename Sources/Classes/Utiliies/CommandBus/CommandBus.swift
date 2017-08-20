@@ -1,5 +1,5 @@
 //
-//  XCommandBus.swift
+//  CommandBus.swift
 //  ExtAppKit
 //
 //  Created by Thomas Bonk on 03.11.15.
@@ -7,6 +7,7 @@
 //
 
 import Foundation
+
 fileprivate func < <T : Comparable>(lhs: T?, rhs: T?) -> Bool {
   switch (lhs, rhs) {
   case let (l?, r?):
@@ -31,16 +32,16 @@ fileprivate func > <T : Comparable>(lhs: T?, rhs: T?) -> Bool {
 /** 
     Class that provides a CommandBus implementation.
 */
-open class XCommandBus {
+open class CommandBus {
 
     // MARK: Class Constants
 
-    private static let _instance : XCommandBus = { XCommandBus() }()
+    private static let _instance : CommandBus = { CommandBus() }()
 
 
     // MARK: Public Types
 
-    public typealias CommandHandler = (XCommand) -> ()
+    public typealias CommandHandler = (Command) -> ()
 
 
     // MARK: Private Types
@@ -59,14 +60,14 @@ open class XCommandBus {
         :var:       sharedInstance
         :abstract:  Retrieve the singleton instance of the command bus.
     */
-    open class var sharedInstance : XCommandBus {
+    open class var sharedInstance : CommandBus {
         enter()
 
         defer {
             leave()
         }
 
-        return XCommandBus._instance
+        return CommandBus._instance
     }
 
 
@@ -75,9 +76,9 @@ open class XCommandBus {
     open func registerHandler(_ object: AnyObject, commandHandler: @escaping CommandHandler, command: AnyClass) throws {
         enter()
 
-        guard let _ = command as? XCommand.Type else {
+        guard let _ = command as? Command.Type else {
 
-            throw XCommandBusError.classNotACommand
+            throw CommandBusError.classNotACommand
         }
 
         let mirror = Mirror(reflecting: command)
@@ -104,9 +105,9 @@ open class XCommandBus {
     open func removeHandler(_ object: AnyObject, command: AnyClass) throws {
         enter()
 
-        guard let _ = command as? XCommand.Type else {
+        guard let _ = command as? Command.Type else {
 
-            throw XCommandBusError.classNotACommand
+            throw CommandBusError.classNotACommand
         }
 
         let mirror = Mirror(reflecting: command)
@@ -114,7 +115,7 @@ open class XCommandBus {
 
         guard self._commandHandlerDirectory.keys.contains(commandId) else {
 
-            throw XCommandBusError.commandNotRegistered
+            throw CommandBusError.commandNotRegistered
         }
 
         var handlers = self._commandHandlerDirectory[commandId]
@@ -135,7 +136,7 @@ open class XCommandBus {
         }
     }
 
-    open func sendCommand(_ command: XCommand) {
+    open func sendCommand(_ command: Command) {
         enter()
 
         let mirror = Mirror(reflecting: command.self)

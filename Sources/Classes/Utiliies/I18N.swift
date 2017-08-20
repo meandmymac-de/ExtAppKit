@@ -1,5 +1,5 @@
 //
-//  XI18N.swift
+//  I18N.swift
 //  ExtAppKit
 //
 //  Created by Thomas Bonk on 25.10.14.

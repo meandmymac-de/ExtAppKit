@@ -1,5 +1,5 @@
 //
-//  XStreamReader.swift
+//  StreamReader.swift
 //  ExtAppKit
 //
 //  Created by Thomas Bonk on 19.05.16.
@@ -8,7 +8,7 @@
 
 import Foundation
 
-open class XStreamReader: Sequence  {
+open class StreamReader: Sequence  {
 
     let encoding : UInt
     let chunkSize : Int

@@ -1,5 +1,5 @@
 //
-//  XUserSettings.swift
+//  UserSettings.swift
 //  ExtAppKit
 //
 //  Created by Thomas Bonk on 22.10.14.
@@ -11,7 +11,7 @@ import Foundation
 /**
     Convenient class for managing the user defaults.
 */
-open class XUserSettings: NSObject {
+open class UserSettings: NSObject {
 
     // MARK: Initialization
 

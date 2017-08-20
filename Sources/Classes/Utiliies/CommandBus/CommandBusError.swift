@@ -1,5 +1,5 @@
 //
-//  XCommandBusError.swift
+//  CommandBusError.swift
 //  ExtAppKit
 //
 //  Created by Thomas Bonk on 03.11.15.
@@ -11,7 +11,7 @@ import Foundation
 /**
     Errors that can be thrown by the command bus
 */
-public enum XCommandBusError: Error {
+public enum CommandBusError: Error {
 
     case classNotACommand
     case commandNotRegistered

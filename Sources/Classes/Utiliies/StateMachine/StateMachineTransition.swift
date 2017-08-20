@@ -1,5 +1,5 @@
 //
-//  XStateMachineTransition.swift
+//  StateMachineTransition.swift
 //  ExtAppKit
 //
 //  Created by Bonk, Thomas on 13.02.17.
@@ -8,7 +8,7 @@
 
 import Foundation
 
-internal class XStateMachineTransition<S: XStateType, E: XEventType> {
+internal class StateMachineTransition<S: StateType, E: EventType> {
     
     // MARK: - Public Properties
     

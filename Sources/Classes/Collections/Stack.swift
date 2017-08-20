@@ -1,5 +1,5 @@
 //
-//  XStack.swift
+//  Stack.swift
 //  ExtAppKit
 //
 //  Created by Thomas Bonk on 18.09.14.
@@ -11,7 +11,7 @@ import Foundation
 /**
     Class for managing stacks of a specific type.
  */
-open class XStack<T> {
+open class Stack<T> {
 
     // MARK: Private Properties
 

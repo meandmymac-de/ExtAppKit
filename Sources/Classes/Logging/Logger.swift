@@ -1,5 +1,5 @@
 //
-//  XLogger.swift
+//  Logger.swift
 //  ExtAppKit
 //
 //  Created by Thomas Bonk on 18.09.14.
@@ -15,7 +15,7 @@ import Foundation
     All available log levels. They are hierarchical, i.e. if log level Trace
     is set, all messages with a Debug, Info, ... will be logged.
  */
-public enum XLogLevel : Int, CustomStringConvertible
+public enum LogLevel : Int, CustomStringConvertible
 {
     case trace   = 1
     case debug   = 2
@@ -71,7 +71,7 @@ public enum XLogLevel : Int, CustomStringConvertible
 
     :returns: The formatted message
 */
-public typealias XLogFormatter = (_ logLevel: XLogLevel,
+public typealias LogFormatter = (_ logLevel: LogLevel,
                                  _ timestamp: Date,
                                       _ area: String,
                                    _ message: String,
@@ -84,11 +84,11 @@ public typealias XLogFormatter = (_ logLevel: XLogLevel,
 
     :param: message The message to write
 */
-public typealias XLogWriter = (_ message: String) -> ()
+public typealias LogWriter = (_ message: String) -> ()
 
 
 
-open class XLogger {
+open class Logger {
 
     private static let _dispatchQ : DispatchQueue = {
 
@@ -103,22 +103,22 @@ open class XLogger {
     /**
         The log level
      */
-    open var logLevel : XLogLevel = .info
+    open var logLevel : LogLevel = .info
 
     /**
         Closure which formmats a message
      */
-    open var formatter : XLogFormatter!
+    open var formatter : LogFormatter!
 
     /**
         Closure which writes a message
      */
-    open var writer   : XLogWriter!
+    open var writer   : LogWriter!
 
 
     // MARK: Private Properties
 
-    fileprivate var _areaLogLevel = Dictionary<String, XLogLevel>()
+    fileprivate var _areaLogLevel = Dictionary<String, LogLevel>()
 
 
     // MARK: Initialization
@@ -132,10 +132,10 @@ open class XLogger {
 
     // MARK: - Default Instance
 
-    open class func defaultInstance() -> XLogger {
+    open class func defaultInstance() -> Logger {
 
         struct statics {
-            static let instance: XLogger = XLogger()
+            static let instance: Logger = Logger()
         }
 
         return statics.instance
@@ -147,7 +147,7 @@ open class XLogger {
         :param: area        The area
         :param: logLevel    The log level
     */
-    open func setAreaLogLevel(_ area: String, logLevel: XLogLevel) {
+    open func setAreaLogLevel(_ area: String, logLevel: LogLevel) {
 
         self._areaLogLevel[area] = logLevel
     }
@@ -163,9 +163,9 @@ open class XLogger {
 
         :returns: true if the log level is enabled, otherwise false
     */
-    open func isLogLevelEnabled(_ logLevel: XLogLevel, area: String? = nil) -> Bool {
+    open func isLogLevelEnabled(_ logLevel: LogLevel, area: String? = nil) -> Bool {
 
-        var level     : XLogLevel! = nil
+        var level     : LogLevel! = nil
         var isEnabled : Bool
 
         if area != nil {
@@ -199,7 +199,7 @@ open class XLogger {
         :param: fileName     Name of the file which the message is logged
         :param: lineNumber   Line number of the log command
      */
-    open func log(_ logLevel: XLogLevel,
+    open func log(_ logLevel: LogLevel,
                         area: String,
                      message: String,
                 functionName: String = #function,
@@ -362,7 +362,7 @@ open class XLogger {
         :param: logLevel The log level
         :param: closure  The closure to execute
     */
-    open func execute(_ logLevel: XLogLevel, closure: () -> () = {}) {
+    open func execute(_ logLevel: LogLevel, closure: () -> () = {}) {
 
         if self.isLogLevelEnabled(logLevel) {
 
@@ -403,7 +403,7 @@ open class XLogger {
 
     // MARK: Default Closure Methods
 
-    fileprivate func format(_ logLevel: XLogLevel,
+    fileprivate func format(_ logLevel: LogLevel,
                        timestamp: Date,
                             area: String,
                          message: String,
@@ -417,7 +417,7 @@ open class XLogger {
 
     fileprivate func write(_ message: String) {
 
-        XLogger._dispatchQ.async {
+        Logger._dispatchQ.async {
 
             NSLog("%@", message)
         }
@@ -429,70 +429,70 @@ open class XLogger {
 
 public func trace(_ area: String, message: String, functionName: String = #function, fileName: String = #file, lineNumber: Int = #line) {
 
-    XLogger.defaultInstance().trace(area, message: message, functionName: functionName, fileName: fileName, lineNumber: lineNumber)
+    Logger.defaultInstance().trace(area, message: message, functionName: functionName, fileName: fileName, lineNumber: lineNumber)
 }
 
 public func debug(_ area: String, message: String, functionName: String = #function, fileName: String = #file, lineNumber: Int = #line) {
 
-    XLogger.defaultInstance().debug(area, message: message, functionName: functionName, fileName: fileName, lineNumber: lineNumber)
+    Logger.defaultInstance().debug(area, message: message, functionName: functionName, fileName: fileName, lineNumber: lineNumber)
 }
 
 public func info(_ area: String, message: String, functionName: String = #function, fileName: String = #file, lineNumber: Int = #line) {
 
-    XLogger.defaultInstance().info(area, message: message, functionName: functionName, fileName: fileName, lineNumber: lineNumber)
+    Logger.defaultInstance().info(area, message: message, functionName: functionName, fileName: fileName, lineNumber: lineNumber)
 }
 
 public func warn(_ area: String, message: String, functionName: String = #function, fileName: String = #file, lineNumber: Int = #line) {
 
-    XLogger.defaultInstance().warn(area, message: message, functionName: functionName, fileName: fileName, lineNumber: lineNumber)
+    Logger.defaultInstance().warn(area, message: message, functionName: functionName, fileName: fileName, lineNumber: lineNumber)
 }
 
 public func error(_ area: String, message: String, functionName: String = #function, fileName: String = #file, lineNumber: Int = #line) {
 
-    XLogger.defaultInstance().error(area, message: message, functionName: functionName, fileName: fileName, lineNumber: lineNumber)
+    Logger.defaultInstance().error(area, message: message, functionName: functionName, fileName: fileName, lineNumber: lineNumber)
 }
 
 public func fatal(_ area: String, message: String, functionName: String = #function, fileName: String = #file, lineNumber: Int = #line) {
 
-    XLogger.defaultInstance().fatal(area, message: message, functionName: functionName, fileName: fileName, lineNumber: lineNumber)
+    Logger.defaultInstance().fatal(area, message: message, functionName: functionName, fileName: fileName, lineNumber: lineNumber)
 }
 
 public func traceExec(_ closure: () -> () = {}) {
 
-    XLogger.defaultInstance().execute(.trace, closure: closure)
+    Logger.defaultInstance().execute(.trace, closure: closure)
 }
 
 public func debugExec(_ closure: () -> () = {}) {
 
-    XLogger.defaultInstance().execute(.debug, closure: closure)
+    Logger.defaultInstance().execute(.debug, closure: closure)
 }
 
 public func infoExec(_ closure: () -> () = {}) {
 
-    XLogger.defaultInstance().execute(.info, closure: closure)
+    Logger.defaultInstance().execute(.info, closure: closure)
 }
 
 public func warnExec(_ closure: () -> () = {}) {
 
-    XLogger.defaultInstance().execute(.warn, closure: closure)
+    Logger.defaultInstance().execute(.warn, closure: closure)
 }
 
 public func errorExec(_ closure: () -> () = {}) {
 
-    XLogger.defaultInstance().execute(.error, closure: closure)
+    Logger.defaultInstance().execute(.error, closure: closure)
 }
 
 public func fatalExec(_ closure: () -> () = {}) {
 
-    XLogger.defaultInstance().execute(.fatal, closure: closure)
+    Logger.defaultInstance().execute(.fatal, closure: closure)
 }
 
 public func enter(_ functionName: String = #function, fileName: String = #file, lineNumber: Int = #line) {
 
-    XLogger.defaultInstance().trace("TRACE", message: "ENTER_FUNCTION", functionName: functionName,fileName: fileName, lineNumber: lineNumber)
+    Logger.defaultInstance().trace("TRACE", message: "ENTER_FUNCTION", functionName: functionName,fileName: fileName, lineNumber: lineNumber)
 }
 
 public func leave(_ functionName: String = #function, fileName: String = #file, lineNumber: Int = #line) {
 
-    XLogger.defaultInstance().trace("TRACE", message: "LEAVE_FUNCTION", functionName: functionName,fileName: fileName, lineNumber: lineNumber)
+    Logger.defaultInstance().trace("TRACE", message: "LEAVE_FUNCTION", functionName: functionName,fileName: fileName, lineNumber: lineNumber)
 }

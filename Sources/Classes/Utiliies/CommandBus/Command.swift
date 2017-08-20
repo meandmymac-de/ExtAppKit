@@ -1,5 +1,5 @@
 //
-//  XCommand.swift
+//  Command.swift
 //  ExtAppKit
 //
 //  Created by Thomas Bonk on 03.11.15.
@@ -12,6 +12,6 @@ import Foundation
     This protocol must be implemented by commands that shall be send using the
     Command Bus.
 */
-public protocol XCommand {
+public protocol Command {
 
 }

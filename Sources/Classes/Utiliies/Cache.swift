@@ -1,5 +1,5 @@
 //
-//  XCache.swift
+//  Cache.swift
 //  ExtAppKit
 //
 //  Created by Thomas Bonk on 23.11.15.
@@ -9,11 +9,11 @@
 import Foundation
 
 
-open class XCache {
+open class Cache {
 
     // Mark: Class Variables
 
-    private static let _instance: XCache = { XCache() }()
+    private static let _instance: Cache = { Cache() }()
 
 
     // MARK: Public Typealiases
@@ -22,9 +22,9 @@ open class XCache {
 
     // MARK: Singleton Property 
 
-    open class var sharedInstance : XCache {
+    open class var sharedInstance : Cache {
 
-        return XCache._instance
+        return Cache._instance
     }
 
 

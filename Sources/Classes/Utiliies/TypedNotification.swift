@@ -1,5 +1,5 @@
 //
-//  XTypedNotification.swift
+//  TypedNotification.swift
 //  
 //
 //  Created by Thomas Bonk on 28.01.15.

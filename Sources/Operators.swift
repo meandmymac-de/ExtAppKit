@@ -1,5 +1,5 @@
 //
-//  XOperators.swift
+//  Operators.swift
 //  ExtAppKit
 //
 //  Created by Thomas Bonk on 07.11.16.

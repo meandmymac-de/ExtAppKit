@@ -1,5 +1,5 @@
 //
-//  XAssociatedObjects.swift
+//  AssociatedObjects.swift
 //  ExtAppKit
 //
 //  Created by Thomas Bonk on 19.12.15.

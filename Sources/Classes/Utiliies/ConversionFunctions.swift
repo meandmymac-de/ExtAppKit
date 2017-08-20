@@ -1,5 +1,5 @@
 //
-//  XConversionFunctions.swift
+//  ConversionFunctions.swift
 //  ExtAppKit
 //
 //  Created by Thomas Bonk on 26.11.15.

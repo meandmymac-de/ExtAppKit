@@ -1,5 +1,5 @@
 //
-//  XEventType.swift
+//  EventType.swift
 //  ExtAppKit
 //
 //  Created by Bonk, Thomas on 13.02.17.
@@ -8,11 +8,11 @@
 
 import Foundation
 
-public protocol XEventType: Hashable {
+public protocol EventType: Hashable {
     
 }
 
-public enum NoEvents: XEventType {
+public enum NoEvents: EventType {
 
     case any
 }

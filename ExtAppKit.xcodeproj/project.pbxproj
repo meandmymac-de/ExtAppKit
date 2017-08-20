@@ -7,80 +7,80 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B361DA851E518C4800CA2848 /* XStateMachine.swift in Sources */ = {isa = PBXBuildFile; fileRef = B361DA841E518C4800CA2848 /* XStateMachine.swift */; };
-		B361DA861E518C4800CA2848 /* XStateMachine.swift in Sources */ = {isa = PBXBuildFile; fileRef = B361DA841E518C4800CA2848 /* XStateMachine.swift */; };
-		B361DA871E518C4800CA2848 /* XStateMachine.swift in Sources */ = {isa = PBXBuildFile; fileRef = B361DA841E518C4800CA2848 /* XStateMachine.swift */; };
-		B361DA881E518C4800CA2848 /* XStateMachine.swift in Sources */ = {isa = PBXBuildFile; fileRef = B361DA841E518C4800CA2848 /* XStateMachine.swift */; };
-		B361DA8A1E518CBA00CA2848 /* XStateType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B361DA891E518CBA00CA2848 /* XStateType.swift */; };
-		B361DA8B1E518CBA00CA2848 /* XStateType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B361DA891E518CBA00CA2848 /* XStateType.swift */; };
-		B361DA8C1E518CBA00CA2848 /* XStateType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B361DA891E518CBA00CA2848 /* XStateType.swift */; };
-		B361DA8D1E518CBA00CA2848 /* XStateType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B361DA891E518CBA00CA2848 /* XStateType.swift */; };
-		B361DA8F1E518CE800CA2848 /* XEventType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B361DA8E1E518CE800CA2848 /* XEventType.swift */; };
-		B361DA901E518CE800CA2848 /* XEventType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B361DA8E1E518CE800CA2848 /* XEventType.swift */; };
-		B361DA911E518CE800CA2848 /* XEventType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B361DA8E1E518CE800CA2848 /* XEventType.swift */; };
-		B361DA921E518CE800CA2848 /* XEventType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B361DA8E1E518CE800CA2848 /* XEventType.swift */; };
+		B361DA851E518C4800CA2848 /* StateMachine.swift in Sources */ = {isa = PBXBuildFile; fileRef = B361DA841E518C4800CA2848 /* StateMachine.swift */; };
+		B361DA861E518C4800CA2848 /* StateMachine.swift in Sources */ = {isa = PBXBuildFile; fileRef = B361DA841E518C4800CA2848 /* StateMachine.swift */; };
+		B361DA871E518C4800CA2848 /* StateMachine.swift in Sources */ = {isa = PBXBuildFile; fileRef = B361DA841E518C4800CA2848 /* StateMachine.swift */; };
+		B361DA881E518C4800CA2848 /* StateMachine.swift in Sources */ = {isa = PBXBuildFile; fileRef = B361DA841E518C4800CA2848 /* StateMachine.swift */; };
+		B361DA8A1E518CBA00CA2848 /* StateType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B361DA891E518CBA00CA2848 /* StateType.swift */; };
+		B361DA8B1E518CBA00CA2848 /* StateType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B361DA891E518CBA00CA2848 /* StateType.swift */; };
+		B361DA8C1E518CBA00CA2848 /* StateType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B361DA891E518CBA00CA2848 /* StateType.swift */; };
+		B361DA8D1E518CBA00CA2848 /* StateType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B361DA891E518CBA00CA2848 /* StateType.swift */; };
+		B361DA8F1E518CE800CA2848 /* EventType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B361DA8E1E518CE800CA2848 /* EventType.swift */; };
+		B361DA901E518CE800CA2848 /* EventType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B361DA8E1E518CE800CA2848 /* EventType.swift */; };
+		B361DA911E518CE800CA2848 /* EventType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B361DA8E1E518CE800CA2848 /* EventType.swift */; };
+		B361DA921E518CE800CA2848 /* EventType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B361DA8E1E518CE800CA2848 /* EventType.swift */; };
 		B361DA9C1E518DCD00CA2848 /* ExtAppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BBB55AD41C8F88F20050DDA9 /* ExtAppKit.framework */; };
 		B361DAA31E51C35D00CA2848 /* StateMachineTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B361DAA21E51C35D00CA2848 /* StateMachineTests.swift */; };
-		B3F426D41E51D5F2001B5849 /* XStateMachineTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3F426D31E51D5F2001B5849 /* XStateMachineTransition.swift */; };
-		B3F426D51E51D5F2001B5849 /* XStateMachineTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3F426D31E51D5F2001B5849 /* XStateMachineTransition.swift */; };
-		B3F426D61E51D5F2001B5849 /* XStateMachineTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3F426D31E51D5F2001B5849 /* XStateMachineTransition.swift */; };
-		B3F426D71E51D5F2001B5849 /* XStateMachineTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3F426D31E51D5F2001B5849 /* XStateMachineTransition.swift */; };
-		E9044B5B1E3CE9FB002917C5 /* XStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9044B451E3CE9FB002917C5 /* XStack.swift */; };
-		E9044B5C1E3CE9FB002917C5 /* XStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9044B451E3CE9FB002917C5 /* XStack.swift */; };
-		E9044B5D1E3CE9FB002917C5 /* XStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9044B451E3CE9FB002917C5 /* XStack.swift */; };
-		E9044B5E1E3CE9FB002917C5 /* XStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9044B451E3CE9FB002917C5 /* XStack.swift */; };
-		E9044B5F1E3CE9FB002917C5 /* XLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9044B471E3CE9FB002917C5 /* XLogger.swift */; };
-		E9044B601E3CE9FB002917C5 /* XLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9044B471E3CE9FB002917C5 /* XLogger.swift */; };
-		E9044B611E3CE9FB002917C5 /* XLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9044B471E3CE9FB002917C5 /* XLogger.swift */; };
-		E9044B621E3CE9FB002917C5 /* XLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9044B471E3CE9FB002917C5 /* XLogger.swift */; };
-		E9044B631E3CE9FB002917C5 /* XCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9044B4A1E3CE9FB002917C5 /* XCommand.swift */; };
-		E9044B641E3CE9FB002917C5 /* XCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9044B4A1E3CE9FB002917C5 /* XCommand.swift */; };
-		E9044B651E3CE9FB002917C5 /* XCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9044B4A1E3CE9FB002917C5 /* XCommand.swift */; };
-		E9044B661E3CE9FB002917C5 /* XCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9044B4A1E3CE9FB002917C5 /* XCommand.swift */; };
-		E9044B671E3CE9FB002917C5 /* XCommandBus.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9044B4B1E3CE9FB002917C5 /* XCommandBus.swift */; };
-		E9044B681E3CE9FB002917C5 /* XCommandBus.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9044B4B1E3CE9FB002917C5 /* XCommandBus.swift */; };
-		E9044B691E3CE9FB002917C5 /* XCommandBus.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9044B4B1E3CE9FB002917C5 /* XCommandBus.swift */; };
-		E9044B6A1E3CE9FB002917C5 /* XCommandBus.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9044B4B1E3CE9FB002917C5 /* XCommandBus.swift */; };
-		E9044B6B1E3CE9FB002917C5 /* XCommandBusError.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9044B4C1E3CE9FB002917C5 /* XCommandBusError.swift */; };
-		E9044B6C1E3CE9FB002917C5 /* XCommandBusError.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9044B4C1E3CE9FB002917C5 /* XCommandBusError.swift */; };
-		E9044B6D1E3CE9FB002917C5 /* XCommandBusError.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9044B4C1E3CE9FB002917C5 /* XCommandBusError.swift */; };
-		E9044B6E1E3CE9FB002917C5 /* XCommandBusError.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9044B4C1E3CE9FB002917C5 /* XCommandBusError.swift */; };
+		B3F426D41E51D5F2001B5849 /* StateMachineTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3F426D31E51D5F2001B5849 /* StateMachineTransition.swift */; };
+		B3F426D51E51D5F2001B5849 /* StateMachineTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3F426D31E51D5F2001B5849 /* StateMachineTransition.swift */; };
+		B3F426D61E51D5F2001B5849 /* StateMachineTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3F426D31E51D5F2001B5849 /* StateMachineTransition.swift */; };
+		B3F426D71E51D5F2001B5849 /* StateMachineTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3F426D31E51D5F2001B5849 /* StateMachineTransition.swift */; };
+		E9044B5B1E3CE9FB002917C5 /* Stack.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9044B451E3CE9FB002917C5 /* Stack.swift */; };
+		E9044B5C1E3CE9FB002917C5 /* Stack.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9044B451E3CE9FB002917C5 /* Stack.swift */; };
+		E9044B5D1E3CE9FB002917C5 /* Stack.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9044B451E3CE9FB002917C5 /* Stack.swift */; };
+		E9044B5E1E3CE9FB002917C5 /* Stack.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9044B451E3CE9FB002917C5 /* Stack.swift */; };
+		E9044B5F1E3CE9FB002917C5 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9044B471E3CE9FB002917C5 /* Logger.swift */; };
+		E9044B601E3CE9FB002917C5 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9044B471E3CE9FB002917C5 /* Logger.swift */; };
+		E9044B611E3CE9FB002917C5 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9044B471E3CE9FB002917C5 /* Logger.swift */; };
+		E9044B621E3CE9FB002917C5 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9044B471E3CE9FB002917C5 /* Logger.swift */; };
+		E9044B631E3CE9FB002917C5 /* Command.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9044B4A1E3CE9FB002917C5 /* Command.swift */; };
+		E9044B641E3CE9FB002917C5 /* Command.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9044B4A1E3CE9FB002917C5 /* Command.swift */; };
+		E9044B651E3CE9FB002917C5 /* Command.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9044B4A1E3CE9FB002917C5 /* Command.swift */; };
+		E9044B661E3CE9FB002917C5 /* Command.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9044B4A1E3CE9FB002917C5 /* Command.swift */; };
+		E9044B671E3CE9FB002917C5 /* CommandBus.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9044B4B1E3CE9FB002917C5 /* CommandBus.swift */; };
+		E9044B681E3CE9FB002917C5 /* CommandBus.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9044B4B1E3CE9FB002917C5 /* CommandBus.swift */; };
+		E9044B691E3CE9FB002917C5 /* CommandBus.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9044B4B1E3CE9FB002917C5 /* CommandBus.swift */; };
+		E9044B6A1E3CE9FB002917C5 /* CommandBus.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9044B4B1E3CE9FB002917C5 /* CommandBus.swift */; };
+		E9044B6B1E3CE9FB002917C5 /* CommandBusError.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9044B4C1E3CE9FB002917C5 /* CommandBusError.swift */; };
+		E9044B6C1E3CE9FB002917C5 /* CommandBusError.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9044B4C1E3CE9FB002917C5 /* CommandBusError.swift */; };
+		E9044B6D1E3CE9FB002917C5 /* CommandBusError.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9044B4C1E3CE9FB002917C5 /* CommandBusError.swift */; };
+		E9044B6E1E3CE9FB002917C5 /* CommandBusError.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9044B4C1E3CE9FB002917C5 /* CommandBusError.swift */; };
 		E9044B6F1E3CE9FB002917C5 /* DoThis.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9044B4D1E3CE9FB002917C5 /* DoThis.swift */; };
 		E9044B701E3CE9FB002917C5 /* DoThis.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9044B4D1E3CE9FB002917C5 /* DoThis.swift */; };
 		E9044B711E3CE9FB002917C5 /* DoThis.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9044B4D1E3CE9FB002917C5 /* DoThis.swift */; };
 		E9044B721E3CE9FB002917C5 /* DoThis.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9044B4D1E3CE9FB002917C5 /* DoThis.swift */; };
-		E9044B831E3CE9FB002917C5 /* XAssociatedObjects.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9044B531E3CE9FB002917C5 /* XAssociatedObjects.swift */; };
-		E9044B841E3CE9FB002917C5 /* XAssociatedObjects.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9044B531E3CE9FB002917C5 /* XAssociatedObjects.swift */; };
-		E9044B851E3CE9FB002917C5 /* XAssociatedObjects.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9044B531E3CE9FB002917C5 /* XAssociatedObjects.swift */; };
-		E9044B861E3CE9FB002917C5 /* XAssociatedObjects.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9044B531E3CE9FB002917C5 /* XAssociatedObjects.swift */; };
-		E9044B871E3CE9FB002917C5 /* XCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9044B541E3CE9FB002917C5 /* XCache.swift */; };
-		E9044B881E3CE9FB002917C5 /* XCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9044B541E3CE9FB002917C5 /* XCache.swift */; };
-		E9044B891E3CE9FB002917C5 /* XCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9044B541E3CE9FB002917C5 /* XCache.swift */; };
-		E9044B8A1E3CE9FB002917C5 /* XCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9044B541E3CE9FB002917C5 /* XCache.swift */; };
-		E9044B8B1E3CE9FB002917C5 /* XConversionFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9044B551E3CE9FB002917C5 /* XConversionFunctions.swift */; };
-		E9044B8C1E3CE9FB002917C5 /* XConversionFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9044B551E3CE9FB002917C5 /* XConversionFunctions.swift */; };
-		E9044B8D1E3CE9FB002917C5 /* XConversionFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9044B551E3CE9FB002917C5 /* XConversionFunctions.swift */; };
-		E9044B8E1E3CE9FB002917C5 /* XConversionFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9044B551E3CE9FB002917C5 /* XConversionFunctions.swift */; };
-		E9044B8F1E3CE9FB002917C5 /* XI18N.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9044B561E3CE9FB002917C5 /* XI18N.swift */; };
-		E9044B901E3CE9FB002917C5 /* XI18N.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9044B561E3CE9FB002917C5 /* XI18N.swift */; };
-		E9044B911E3CE9FB002917C5 /* XI18N.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9044B561E3CE9FB002917C5 /* XI18N.swift */; };
-		E9044B921E3CE9FB002917C5 /* XI18N.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9044B561E3CE9FB002917C5 /* XI18N.swift */; };
-		E9044B931E3CE9FB002917C5 /* XQueueExecution.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9044B571E3CE9FB002917C5 /* XQueueExecution.swift */; };
-		E9044B941E3CE9FB002917C5 /* XQueueExecution.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9044B571E3CE9FB002917C5 /* XQueueExecution.swift */; };
-		E9044B951E3CE9FB002917C5 /* XQueueExecution.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9044B571E3CE9FB002917C5 /* XQueueExecution.swift */; };
-		E9044B961E3CE9FB002917C5 /* XQueueExecution.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9044B571E3CE9FB002917C5 /* XQueueExecution.swift */; };
-		E9044B971E3CE9FB002917C5 /* XStreamReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9044B581E3CE9FB002917C5 /* XStreamReader.swift */; };
-		E9044B981E3CE9FB002917C5 /* XStreamReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9044B581E3CE9FB002917C5 /* XStreamReader.swift */; };
-		E9044B991E3CE9FB002917C5 /* XStreamReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9044B581E3CE9FB002917C5 /* XStreamReader.swift */; };
-		E9044B9A1E3CE9FB002917C5 /* XStreamReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9044B581E3CE9FB002917C5 /* XStreamReader.swift */; };
-		E9044B9B1E3CE9FB002917C5 /* XTypedNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9044B591E3CE9FB002917C5 /* XTypedNotification.swift */; };
-		E9044B9C1E3CE9FB002917C5 /* XTypedNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9044B591E3CE9FB002917C5 /* XTypedNotification.swift */; };
-		E9044B9D1E3CE9FB002917C5 /* XTypedNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9044B591E3CE9FB002917C5 /* XTypedNotification.swift */; };
-		E9044B9E1E3CE9FB002917C5 /* XTypedNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9044B591E3CE9FB002917C5 /* XTypedNotification.swift */; };
-		E9044B9F1E3CE9FB002917C5 /* XUserSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9044B5A1E3CE9FB002917C5 /* XUserSettings.swift */; };
-		E9044BA01E3CE9FB002917C5 /* XUserSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9044B5A1E3CE9FB002917C5 /* XUserSettings.swift */; };
-		E9044BA11E3CE9FB002917C5 /* XUserSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9044B5A1E3CE9FB002917C5 /* XUserSettings.swift */; };
-		E9044BA21E3CE9FB002917C5 /* XUserSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9044B5A1E3CE9FB002917C5 /* XUserSettings.swift */; };
+		E9044B831E3CE9FB002917C5 /* AssociatedObjects.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9044B531E3CE9FB002917C5 /* AssociatedObjects.swift */; };
+		E9044B841E3CE9FB002917C5 /* AssociatedObjects.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9044B531E3CE9FB002917C5 /* AssociatedObjects.swift */; };
+		E9044B851E3CE9FB002917C5 /* AssociatedObjects.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9044B531E3CE9FB002917C5 /* AssociatedObjects.swift */; };
+		E9044B861E3CE9FB002917C5 /* AssociatedObjects.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9044B531E3CE9FB002917C5 /* AssociatedObjects.swift */; };
+		E9044B871E3CE9FB002917C5 /* Cache.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9044B541E3CE9FB002917C5 /* Cache.swift */; };
+		E9044B881E3CE9FB002917C5 /* Cache.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9044B541E3CE9FB002917C5 /* Cache.swift */; };
+		E9044B891E3CE9FB002917C5 /* Cache.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9044B541E3CE9FB002917C5 /* Cache.swift */; };
+		E9044B8A1E3CE9FB002917C5 /* Cache.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9044B541E3CE9FB002917C5 /* Cache.swift */; };
+		E9044B8B1E3CE9FB002917C5 /* ConversionFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9044B551E3CE9FB002917C5 /* ConversionFunctions.swift */; };
+		E9044B8C1E3CE9FB002917C5 /* ConversionFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9044B551E3CE9FB002917C5 /* ConversionFunctions.swift */; };
+		E9044B8D1E3CE9FB002917C5 /* ConversionFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9044B551E3CE9FB002917C5 /* ConversionFunctions.swift */; };
+		E9044B8E1E3CE9FB002917C5 /* ConversionFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9044B551E3CE9FB002917C5 /* ConversionFunctions.swift */; };
+		E9044B8F1E3CE9FB002917C5 /* I18N.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9044B561E3CE9FB002917C5 /* I18N.swift */; };
+		E9044B901E3CE9FB002917C5 /* I18N.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9044B561E3CE9FB002917C5 /* I18N.swift */; };
+		E9044B911E3CE9FB002917C5 /* I18N.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9044B561E3CE9FB002917C5 /* I18N.swift */; };
+		E9044B921E3CE9FB002917C5 /* I18N.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9044B561E3CE9FB002917C5 /* I18N.swift */; };
+		E9044B931E3CE9FB002917C5 /* QueueExecution.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9044B571E3CE9FB002917C5 /* QueueExecution.swift */; };
+		E9044B941E3CE9FB002917C5 /* QueueExecution.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9044B571E3CE9FB002917C5 /* QueueExecution.swift */; };
+		E9044B951E3CE9FB002917C5 /* QueueExecution.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9044B571E3CE9FB002917C5 /* QueueExecution.swift */; };
+		E9044B961E3CE9FB002917C5 /* QueueExecution.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9044B571E3CE9FB002917C5 /* QueueExecution.swift */; };
+		E9044B971E3CE9FB002917C5 /* StreamReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9044B581E3CE9FB002917C5 /* StreamReader.swift */; };
+		E9044B981E3CE9FB002917C5 /* StreamReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9044B581E3CE9FB002917C5 /* StreamReader.swift */; };
+		E9044B991E3CE9FB002917C5 /* StreamReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9044B581E3CE9FB002917C5 /* StreamReader.swift */; };
+		E9044B9A1E3CE9FB002917C5 /* StreamReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9044B581E3CE9FB002917C5 /* StreamReader.swift */; };
+		E9044B9B1E3CE9FB002917C5 /* TypedNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9044B591E3CE9FB002917C5 /* TypedNotification.swift */; };
+		E9044B9C1E3CE9FB002917C5 /* TypedNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9044B591E3CE9FB002917C5 /* TypedNotification.swift */; };
+		E9044B9D1E3CE9FB002917C5 /* TypedNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9044B591E3CE9FB002917C5 /* TypedNotification.swift */; };
+		E9044B9E1E3CE9FB002917C5 /* TypedNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9044B591E3CE9FB002917C5 /* TypedNotification.swift */; };
+		E9044B9F1E3CE9FB002917C5 /* UserSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9044B5A1E3CE9FB002917C5 /* UserSettings.swift */; };
+		E9044BA01E3CE9FB002917C5 /* UserSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9044B5A1E3CE9FB002917C5 /* UserSettings.swift */; };
+		E9044BA11E3CE9FB002917C5 /* UserSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9044B5A1E3CE9FB002917C5 /* UserSettings.swift */; };
+		E9044BA21E3CE9FB002917C5 /* UserSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9044B5A1E3CE9FB002917C5 /* UserSettings.swift */; };
 		E9044BA91E3CEA07002917C5 /* NSDate+StringFormat.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9044BA41E3CEA07002917C5 /* NSDate+StringFormat.swift */; };
 		E9044BAA1E3CEA07002917C5 /* NSDate+StringFormat.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9044BA41E3CEA07002917C5 /* NSDate+StringFormat.swift */; };
 		E9044BAB1E3CEA07002917C5 /* NSDate+StringFormat.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9044BA41E3CEA07002917C5 /* NSDate+StringFormat.swift */; };
@@ -101,10 +101,10 @@
 		E9044BBA1E3CEA07002917C5 /* String+Path.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9044BA81E3CEA07002917C5 /* String+Path.swift */; };
 		E9044BBB1E3CEA07002917C5 /* String+Path.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9044BA81E3CEA07002917C5 /* String+Path.swift */; };
 		E9044BBC1E3CEA07002917C5 /* String+Path.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9044BA81E3CEA07002917C5 /* String+Path.swift */; };
-		E9044BBE1E3CEA15002917C5 /* XOperators.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9044BBD1E3CEA15002917C5 /* XOperators.swift */; };
-		E9044BBF1E3CEA15002917C5 /* XOperators.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9044BBD1E3CEA15002917C5 /* XOperators.swift */; };
-		E9044BC01E3CEA15002917C5 /* XOperators.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9044BBD1E3CEA15002917C5 /* XOperators.swift */; };
-		E9044BC11E3CEA15002917C5 /* XOperators.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9044BBD1E3CEA15002917C5 /* XOperators.swift */; };
+		E9044BBE1E3CEA15002917C5 /* Operators.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9044BBD1E3CEA15002917C5 /* Operators.swift */; };
+		E9044BBF1E3CEA15002917C5 /* Operators.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9044BBD1E3CEA15002917C5 /* Operators.swift */; };
+		E9044BC01E3CEA15002917C5 /* Operators.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9044BBD1E3CEA15002917C5 /* Operators.swift */; };
+		E9044BC11E3CEA15002917C5 /* Operators.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9044BBD1E3CEA15002917C5 /* Operators.swift */; };
 		E95B7ACA1E70AE19000A905E /* ApplicationServicesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E95B7AC91E70AE19000A905E /* ApplicationServicesManager.swift */; };
 /* End PBXBuildFile section */
 
@@ -119,39 +119,39 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		B361DA841E518C4800CA2848 /* XStateMachine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XStateMachine.swift; sourceTree = "<group>"; };
-		B361DA891E518CBA00CA2848 /* XStateType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XStateType.swift; sourceTree = "<group>"; };
-		B361DA8E1E518CE800CA2848 /* XEventType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XEventType.swift; sourceTree = "<group>"; };
+		B361DA841E518C4800CA2848 /* StateMachine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StateMachine.swift; sourceTree = "<group>"; };
+		B361DA891E518CBA00CA2848 /* StateType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StateType.swift; sourceTree = "<group>"; };
+		B361DA8E1E518CE800CA2848 /* EventType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventType.swift; sourceTree = "<group>"; };
 		B361DA971E518DCD00CA2848 /* ExtAppKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ExtAppKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B361DA9B1E518DCD00CA2848 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B361DAA21E51C35D00CA2848 /* StateMachineTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StateMachineTests.swift; sourceTree = "<group>"; };
-		B3F426D31E51D5F2001B5849 /* XStateMachineTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XStateMachineTransition.swift; sourceTree = "<group>"; };
+		B3F426D31E51D5F2001B5849 /* StateMachineTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StateMachineTransition.swift; sourceTree = "<group>"; };
 		BBB55AB21C8F80020050DDA9 /* ExtAppKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ExtAppKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BBB55ACC1C8F80660050DDA9 /* version.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = version.xcconfig; sourceTree = "<group>"; };
 		BBB55AD41C8F88F20050DDA9 /* ExtAppKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ExtAppKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BBB55AF11C8F8BE00050DDA9 /* ExtAppKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ExtAppKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BBB55AFE1C8F8CBB0050DDA9 /* ExtAppKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ExtAppKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9044B3D1E3CE877002917C5 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E9044B451E3CE9FB002917C5 /* XStack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XStack.swift; sourceTree = "<group>"; };
-		E9044B471E3CE9FB002917C5 /* XLogger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XLogger.swift; sourceTree = "<group>"; };
-		E9044B4A1E3CE9FB002917C5 /* XCommand.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XCommand.swift; sourceTree = "<group>"; };
-		E9044B4B1E3CE9FB002917C5 /* XCommandBus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XCommandBus.swift; sourceTree = "<group>"; };
-		E9044B4C1E3CE9FB002917C5 /* XCommandBusError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XCommandBusError.swift; sourceTree = "<group>"; };
+		E9044B451E3CE9FB002917C5 /* Stack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stack.swift; sourceTree = "<group>"; };
+		E9044B471E3CE9FB002917C5 /* Logger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
+		E9044B4A1E3CE9FB002917C5 /* Command.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Command.swift; sourceTree = "<group>"; };
+		E9044B4B1E3CE9FB002917C5 /* CommandBus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommandBus.swift; sourceTree = "<group>"; };
+		E9044B4C1E3CE9FB002917C5 /* CommandBusError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommandBusError.swift; sourceTree = "<group>"; };
 		E9044B4D1E3CE9FB002917C5 /* DoThis.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DoThis.swift; sourceTree = "<group>"; };
-		E9044B531E3CE9FB002917C5 /* XAssociatedObjects.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XAssociatedObjects.swift; sourceTree = "<group>"; };
-		E9044B541E3CE9FB002917C5 /* XCache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XCache.swift; sourceTree = "<group>"; };
-		E9044B551E3CE9FB002917C5 /* XConversionFunctions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XConversionFunctions.swift; sourceTree = "<group>"; };
-		E9044B561E3CE9FB002917C5 /* XI18N.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XI18N.swift; sourceTree = "<group>"; };
-		E9044B571E3CE9FB002917C5 /* XQueueExecution.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XQueueExecution.swift; sourceTree = "<group>"; };
-		E9044B581E3CE9FB002917C5 /* XStreamReader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XStreamReader.swift; sourceTree = "<group>"; };
-		E9044B591E3CE9FB002917C5 /* XTypedNotification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XTypedNotification.swift; sourceTree = "<group>"; };
-		E9044B5A1E3CE9FB002917C5 /* XUserSettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XUserSettings.swift; sourceTree = "<group>"; };
+		E9044B531E3CE9FB002917C5 /* AssociatedObjects.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AssociatedObjects.swift; sourceTree = "<group>"; };
+		E9044B541E3CE9FB002917C5 /* Cache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cache.swift; sourceTree = "<group>"; };
+		E9044B551E3CE9FB002917C5 /* ConversionFunctions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConversionFunctions.swift; sourceTree = "<group>"; };
+		E9044B561E3CE9FB002917C5 /* I18N.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = I18N.swift; sourceTree = "<group>"; };
+		E9044B571E3CE9FB002917C5 /* QueueExecution.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QueueExecution.swift; sourceTree = "<group>"; };
+		E9044B581E3CE9FB002917C5 /* StreamReader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StreamReader.swift; sourceTree = "<group>"; };
+		E9044B591E3CE9FB002917C5 /* TypedNotification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TypedNotification.swift; sourceTree = "<group>"; };
+		E9044B5A1E3CE9FB002917C5 /* UserSettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserSettings.swift; sourceTree = "<group>"; };
 		E9044BA41E3CEA07002917C5 /* NSDate+StringFormat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSDate+StringFormat.swift"; sourceTree = "<group>"; };
 		E9044BA51E3CEA07002917C5 /* NSDate+StripDate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSDate+StripDate.swift"; sourceTree = "<group>"; };
 		E9044BA61E3CEA07002917C5 /* NSDate+StripTime.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSDate+StripTime.swift"; sourceTree = "<group>"; };
 		E9044BA71E3CEA07002917C5 /* String+Matches.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Matches.swift"; sourceTree = "<group>"; };
 		E9044BA81E3CEA07002917C5 /* String+Path.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Path.swift"; sourceTree = "<group>"; };
-		E9044BBD1E3CEA15002917C5 /* XOperators.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XOperators.swift; sourceTree = "<group>"; };
+		E9044BBD1E3CEA15002917C5 /* Operators.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Operators.swift; sourceTree = "<group>"; };
 		E95B7AC91E70AE19000A905E /* ApplicationServicesManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApplicationServicesManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -198,10 +198,10 @@
 		B361DA831E518C3000CA2848 /* StateMachine */ = {
 			isa = PBXGroup;
 			children = (
-				B361DA841E518C4800CA2848 /* XStateMachine.swift */,
-				B3F426D31E51D5F2001B5849 /* XStateMachineTransition.swift */,
-				B361DA891E518CBA00CA2848 /* XStateType.swift */,
-				B361DA8E1E518CE800CA2848 /* XEventType.swift */,
+				B361DA841E518C4800CA2848 /* StateMachine.swift */,
+				B3F426D31E51D5F2001B5849 /* StateMachineTransition.swift */,
+				B361DA891E518CBA00CA2848 /* StateType.swift */,
+				B361DA8E1E518CE800CA2848 /* EventType.swift */,
 			);
 			path = StateMachine;
 			sourceTree = "<group>";
@@ -240,7 +240,7 @@
 		BBB55AB41C8F80020050DDA9 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				E9044BBD1E3CEA15002917C5 /* XOperators.swift */,
+				E9044BBD1E3CEA15002917C5 /* Operators.swift */,
 				E9044B431E3CE9FB002917C5 /* Classes */,
 				E9044BA31E3CEA07002917C5 /* Extensions */,
 			);
@@ -269,7 +269,7 @@
 		E9044B441E3CE9FB002917C5 /* Collections */ = {
 			isa = PBXGroup;
 			children = (
-				E9044B451E3CE9FB002917C5 /* XStack.swift */,
+				E9044B451E3CE9FB002917C5 /* Stack.swift */,
 			);
 			path = Collections;
 			sourceTree = "<group>";
@@ -277,7 +277,7 @@
 		E9044B461E3CE9FB002917C5 /* Logging */ = {
 			isa = PBXGroup;
 			children = (
-				E9044B471E3CE9FB002917C5 /* XLogger.swift */,
+				E9044B471E3CE9FB002917C5 /* Logger.swift */,
 			);
 			path = Logging;
 			sourceTree = "<group>";
@@ -289,14 +289,14 @@
 				B361DA831E518C3000CA2848 /* StateMachine */,
 				E9044B4D1E3CE9FB002917C5 /* DoThis.swift */,
 				E95B7AC91E70AE19000A905E /* ApplicationServicesManager.swift */,
-				E9044B531E3CE9FB002917C5 /* XAssociatedObjects.swift */,
-				E9044B541E3CE9FB002917C5 /* XCache.swift */,
-				E9044B551E3CE9FB002917C5 /* XConversionFunctions.swift */,
-				E9044B561E3CE9FB002917C5 /* XI18N.swift */,
-				E9044B571E3CE9FB002917C5 /* XQueueExecution.swift */,
-				E9044B581E3CE9FB002917C5 /* XStreamReader.swift */,
-				E9044B591E3CE9FB002917C5 /* XTypedNotification.swift */,
-				E9044B5A1E3CE9FB002917C5 /* XUserSettings.swift */,
+				E9044B531E3CE9FB002917C5 /* AssociatedObjects.swift */,
+				E9044B541E3CE9FB002917C5 /* Cache.swift */,
+				E9044B551E3CE9FB002917C5 /* ConversionFunctions.swift */,
+				E9044B561E3CE9FB002917C5 /* I18N.swift */,
+				E9044B571E3CE9FB002917C5 /* QueueExecution.swift */,
+				E9044B581E3CE9FB002917C5 /* StreamReader.swift */,
+				E9044B591E3CE9FB002917C5 /* TypedNotification.swift */,
+				E9044B5A1E3CE9FB002917C5 /* UserSettings.swift */,
 			);
 			path = Utiliies;
 			sourceTree = "<group>";
@@ -304,9 +304,9 @@
 		E9044B491E3CE9FB002917C5 /* CommandBus */ = {
 			isa = PBXGroup;
 			children = (
-				E9044B4A1E3CE9FB002917C5 /* XCommand.swift */,
-				E9044B4B1E3CE9FB002917C5 /* XCommandBus.swift */,
-				E9044B4C1E3CE9FB002917C5 /* XCommandBusError.swift */,
+				E9044B4A1E3CE9FB002917C5 /* Command.swift */,
+				E9044B4B1E3CE9FB002917C5 /* CommandBus.swift */,
+				E9044B4C1E3CE9FB002917C5 /* CommandBusError.swift */,
 			);
 			path = CommandBus;
 			sourceTree = "<group>";
@@ -550,29 +550,29 @@
 			buildActionMask = 2147483647;
 			files = (
 				E9044BA91E3CEA07002917C5 /* NSDate+StringFormat.swift in Sources */,
-				E9044B931E3CE9FB002917C5 /* XQueueExecution.swift in Sources */,
-				E9044B8F1E3CE9FB002917C5 /* XI18N.swift in Sources */,
-				E9044B5F1E3CE9FB002917C5 /* XLogger.swift in Sources */,
-				E9044B671E3CE9FB002917C5 /* XCommandBus.swift in Sources */,
-				E9044B9F1E3CE9FB002917C5 /* XUserSettings.swift in Sources */,
+				E9044B931E3CE9FB002917C5 /* QueueExecution.swift in Sources */,
+				E9044B8F1E3CE9FB002917C5 /* I18N.swift in Sources */,
+				E9044B5F1E3CE9FB002917C5 /* Logger.swift in Sources */,
+				E9044B671E3CE9FB002917C5 /* CommandBus.swift in Sources */,
+				E9044B9F1E3CE9FB002917C5 /* UserSettings.swift in Sources */,
 				E9044BAD1E3CEA07002917C5 /* NSDate+StripDate.swift in Sources */,
-				E9044B971E3CE9FB002917C5 /* XStreamReader.swift in Sources */,
-				E9044B831E3CE9FB002917C5 /* XAssociatedObjects.swift in Sources */,
-				E9044BBE1E3CEA15002917C5 /* XOperators.swift in Sources */,
+				E9044B971E3CE9FB002917C5 /* StreamReader.swift in Sources */,
+				E9044B831E3CE9FB002917C5 /* AssociatedObjects.swift in Sources */,
+				E9044BBE1E3CEA15002917C5 /* Operators.swift in Sources */,
 				E9044B6F1E3CE9FB002917C5 /* DoThis.swift in Sources */,
-				B361DA8A1E518CBA00CA2848 /* XStateType.swift in Sources */,
-				E9044B6B1E3CE9FB002917C5 /* XCommandBusError.swift in Sources */,
-				B3F426D41E51D5F2001B5849 /* XStateMachineTransition.swift in Sources */,
+				B361DA8A1E518CBA00CA2848 /* StateType.swift in Sources */,
+				E9044B6B1E3CE9FB002917C5 /* CommandBusError.swift in Sources */,
+				B3F426D41E51D5F2001B5849 /* StateMachineTransition.swift in Sources */,
 				E9044BB11E3CEA07002917C5 /* NSDate+StripTime.swift in Sources */,
-				B361DA851E518C4800CA2848 /* XStateMachine.swift in Sources */,
-				B361DA8F1E518CE800CA2848 /* XEventType.swift in Sources */,
-				E9044B8B1E3CE9FB002917C5 /* XConversionFunctions.swift in Sources */,
-				E9044B871E3CE9FB002917C5 /* XCache.swift in Sources */,
-				E9044B631E3CE9FB002917C5 /* XCommand.swift in Sources */,
+				B361DA851E518C4800CA2848 /* StateMachine.swift in Sources */,
+				B361DA8F1E518CE800CA2848 /* EventType.swift in Sources */,
+				E9044B8B1E3CE9FB002917C5 /* ConversionFunctions.swift in Sources */,
+				E9044B871E3CE9FB002917C5 /* Cache.swift in Sources */,
+				E9044B631E3CE9FB002917C5 /* Command.swift in Sources */,
 				E9044BB91E3CEA07002917C5 /* String+Path.swift in Sources */,
-				E9044B9B1E3CE9FB002917C5 /* XTypedNotification.swift in Sources */,
+				E9044B9B1E3CE9FB002917C5 /* TypedNotification.swift in Sources */,
 				E9044BB51E3CEA07002917C5 /* String+Matches.swift in Sources */,
-				E9044B5B1E3CE9FB002917C5 /* XStack.swift in Sources */,
+				E9044B5B1E3CE9FB002917C5 /* Stack.swift in Sources */,
 				E95B7ACA1E70AE19000A905E /* ApplicationServicesManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -582,29 +582,29 @@
 			buildActionMask = 2147483647;
 			files = (
 				E9044BAA1E3CEA07002917C5 /* NSDate+StringFormat.swift in Sources */,
-				E9044B941E3CE9FB002917C5 /* XQueueExecution.swift in Sources */,
-				E9044B901E3CE9FB002917C5 /* XI18N.swift in Sources */,
-				E9044B601E3CE9FB002917C5 /* XLogger.swift in Sources */,
-				E9044B681E3CE9FB002917C5 /* XCommandBus.swift in Sources */,
-				E9044BA01E3CE9FB002917C5 /* XUserSettings.swift in Sources */,
+				E9044B941E3CE9FB002917C5 /* QueueExecution.swift in Sources */,
+				E9044B901E3CE9FB002917C5 /* I18N.swift in Sources */,
+				E9044B601E3CE9FB002917C5 /* Logger.swift in Sources */,
+				E9044B681E3CE9FB002917C5 /* CommandBus.swift in Sources */,
+				E9044BA01E3CE9FB002917C5 /* UserSettings.swift in Sources */,
 				E9044BAE1E3CEA07002917C5 /* NSDate+StripDate.swift in Sources */,
-				E9044B981E3CE9FB002917C5 /* XStreamReader.swift in Sources */,
-				E9044B841E3CE9FB002917C5 /* XAssociatedObjects.swift in Sources */,
-				E9044BBF1E3CEA15002917C5 /* XOperators.swift in Sources */,
+				E9044B981E3CE9FB002917C5 /* StreamReader.swift in Sources */,
+				E9044B841E3CE9FB002917C5 /* AssociatedObjects.swift in Sources */,
+				E9044BBF1E3CEA15002917C5 /* Operators.swift in Sources */,
 				E9044B701E3CE9FB002917C5 /* DoThis.swift in Sources */,
-				B361DA8B1E518CBA00CA2848 /* XStateType.swift in Sources */,
-				E9044B6C1E3CE9FB002917C5 /* XCommandBusError.swift in Sources */,
-				B3F426D51E51D5F2001B5849 /* XStateMachineTransition.swift in Sources */,
+				B361DA8B1E518CBA00CA2848 /* StateType.swift in Sources */,
+				E9044B6C1E3CE9FB002917C5 /* CommandBusError.swift in Sources */,
+				B3F426D51E51D5F2001B5849 /* StateMachineTransition.swift in Sources */,
 				E9044BB21E3CEA07002917C5 /* NSDate+StripTime.swift in Sources */,
-				B361DA861E518C4800CA2848 /* XStateMachine.swift in Sources */,
-				B361DA901E518CE800CA2848 /* XEventType.swift in Sources */,
-				E9044B8C1E3CE9FB002917C5 /* XConversionFunctions.swift in Sources */,
-				E9044B881E3CE9FB002917C5 /* XCache.swift in Sources */,
-				E9044B641E3CE9FB002917C5 /* XCommand.swift in Sources */,
+				B361DA861E518C4800CA2848 /* StateMachine.swift in Sources */,
+				B361DA901E518CE800CA2848 /* EventType.swift in Sources */,
+				E9044B8C1E3CE9FB002917C5 /* ConversionFunctions.swift in Sources */,
+				E9044B881E3CE9FB002917C5 /* Cache.swift in Sources */,
+				E9044B641E3CE9FB002917C5 /* Command.swift in Sources */,
 				E9044BBA1E3CEA07002917C5 /* String+Path.swift in Sources */,
-				E9044B9C1E3CE9FB002917C5 /* XTypedNotification.swift in Sources */,
+				E9044B9C1E3CE9FB002917C5 /* TypedNotification.swift in Sources */,
 				E9044BB61E3CEA07002917C5 /* String+Matches.swift in Sources */,
-				E9044B5C1E3CE9FB002917C5 /* XStack.swift in Sources */,
+				E9044B5C1E3CE9FB002917C5 /* Stack.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -613,29 +613,29 @@
 			buildActionMask = 2147483647;
 			files = (
 				E9044BAB1E3CEA07002917C5 /* NSDate+StringFormat.swift in Sources */,
-				E9044B951E3CE9FB002917C5 /* XQueueExecution.swift in Sources */,
-				E9044B911E3CE9FB002917C5 /* XI18N.swift in Sources */,
-				E9044B611E3CE9FB002917C5 /* XLogger.swift in Sources */,
-				E9044B691E3CE9FB002917C5 /* XCommandBus.swift in Sources */,
-				E9044BA11E3CE9FB002917C5 /* XUserSettings.swift in Sources */,
+				E9044B951E3CE9FB002917C5 /* QueueExecution.swift in Sources */,
+				E9044B911E3CE9FB002917C5 /* I18N.swift in Sources */,
+				E9044B611E3CE9FB002917C5 /* Logger.swift in Sources */,
+				E9044B691E3CE9FB002917C5 /* CommandBus.swift in Sources */,
+				E9044BA11E3CE9FB002917C5 /* UserSettings.swift in Sources */,
 				E9044BAF1E3CEA07002917C5 /* NSDate+StripDate.swift in Sources */,
-				E9044B991E3CE9FB002917C5 /* XStreamReader.swift in Sources */,
-				E9044B851E3CE9FB002917C5 /* XAssociatedObjects.swift in Sources */,
-				E9044BC01E3CEA15002917C5 /* XOperators.swift in Sources */,
+				E9044B991E3CE9FB002917C5 /* StreamReader.swift in Sources */,
+				E9044B851E3CE9FB002917C5 /* AssociatedObjects.swift in Sources */,
+				E9044BC01E3CEA15002917C5 /* Operators.swift in Sources */,
 				E9044B711E3CE9FB002917C5 /* DoThis.swift in Sources */,
-				B361DA8C1E518CBA00CA2848 /* XStateType.swift in Sources */,
-				E9044B6D1E3CE9FB002917C5 /* XCommandBusError.swift in Sources */,
-				B3F426D61E51D5F2001B5849 /* XStateMachineTransition.swift in Sources */,
+				B361DA8C1E518CBA00CA2848 /* StateType.swift in Sources */,
+				E9044B6D1E3CE9FB002917C5 /* CommandBusError.swift in Sources */,
+				B3F426D61E51D5F2001B5849 /* StateMachineTransition.swift in Sources */,
 				E9044BB31E3CEA07002917C5 /* NSDate+StripTime.swift in Sources */,
-				B361DA871E518C4800CA2848 /* XStateMachine.swift in Sources */,
-				B361DA911E518CE800CA2848 /* XEventType.swift in Sources */,
-				E9044B8D1E3CE9FB002917C5 /* XConversionFunctions.swift in Sources */,
-				E9044B891E3CE9FB002917C5 /* XCache.swift in Sources */,
-				E9044B651E3CE9FB002917C5 /* XCommand.swift in Sources */,
+				B361DA871E518C4800CA2848 /* StateMachine.swift in Sources */,
+				B361DA911E518CE800CA2848 /* EventType.swift in Sources */,
+				E9044B8D1E3CE9FB002917C5 /* ConversionFunctions.swift in Sources */,
+				E9044B891E3CE9FB002917C5 /* Cache.swift in Sources */,
+				E9044B651E3CE9FB002917C5 /* Command.swift in Sources */,
 				E9044BBB1E3CEA07002917C5 /* String+Path.swift in Sources */,
-				E9044B9D1E3CE9FB002917C5 /* XTypedNotification.swift in Sources */,
+				E9044B9D1E3CE9FB002917C5 /* TypedNotification.swift in Sources */,
 				E9044BB71E3CEA07002917C5 /* String+Matches.swift in Sources */,
-				E9044B5D1E3CE9FB002917C5 /* XStack.swift in Sources */,
+				E9044B5D1E3CE9FB002917C5 /* Stack.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -644,29 +644,29 @@
 			buildActionMask = 2147483647;
 			files = (
 				E9044BAC1E3CEA07002917C5 /* NSDate+StringFormat.swift in Sources */,
-				E9044B961E3CE9FB002917C5 /* XQueueExecution.swift in Sources */,
-				E9044B921E3CE9FB002917C5 /* XI18N.swift in Sources */,
-				E9044B621E3CE9FB002917C5 /* XLogger.swift in Sources */,
-				E9044B6A1E3CE9FB002917C5 /* XCommandBus.swift in Sources */,
-				E9044BA21E3CE9FB002917C5 /* XUserSettings.swift in Sources */,
+				E9044B961E3CE9FB002917C5 /* QueueExecution.swift in Sources */,
+				E9044B921E3CE9FB002917C5 /* I18N.swift in Sources */,
+				E9044B621E3CE9FB002917C5 /* Logger.swift in Sources */,
+				E9044B6A1E3CE9FB002917C5 /* CommandBus.swift in Sources */,
+				E9044BA21E3CE9FB002917C5 /* UserSettings.swift in Sources */,
 				E9044BB01E3CEA07002917C5 /* NSDate+StripDate.swift in Sources */,
-				E9044B9A1E3CE9FB002917C5 /* XStreamReader.swift in Sources */,
-				E9044B861E3CE9FB002917C5 /* XAssociatedObjects.swift in Sources */,
-				E9044BC11E3CEA15002917C5 /* XOperators.swift in Sources */,
+				E9044B9A1E3CE9FB002917C5 /* StreamReader.swift in Sources */,
+				E9044B861E3CE9FB002917C5 /* AssociatedObjects.swift in Sources */,
+				E9044BC11E3CEA15002917C5 /* Operators.swift in Sources */,
 				E9044B721E3CE9FB002917C5 /* DoThis.swift in Sources */,
-				B361DA8D1E518CBA00CA2848 /* XStateType.swift in Sources */,
-				E9044B6E1E3CE9FB002917C5 /* XCommandBusError.swift in Sources */,
-				B3F426D71E51D5F2001B5849 /* XStateMachineTransition.swift in Sources */,
+				B361DA8D1E518CBA00CA2848 /* StateType.swift in Sources */,
+				E9044B6E1E3CE9FB002917C5 /* CommandBusError.swift in Sources */,
+				B3F426D71E51D5F2001B5849 /* StateMachineTransition.swift in Sources */,
 				E9044BB41E3CEA07002917C5 /* NSDate+StripTime.swift in Sources */,
-				B361DA881E518C4800CA2848 /* XStateMachine.swift in Sources */,
-				B361DA921E518CE800CA2848 /* XEventType.swift in Sources */,
-				E9044B8E1E3CE9FB002917C5 /* XConversionFunctions.swift in Sources */,
-				E9044B8A1E3CE9FB002917C5 /* XCache.swift in Sources */,
-				E9044B661E3CE9FB002917C5 /* XCommand.swift in Sources */,
+				B361DA881E518C4800CA2848 /* StateMachine.swift in Sources */,
+				B361DA921E518CE800CA2848 /* EventType.swift in Sources */,
+				E9044B8E1E3CE9FB002917C5 /* ConversionFunctions.swift in Sources */,
+				E9044B8A1E3CE9FB002917C5 /* Cache.swift in Sources */,
+				E9044B661E3CE9FB002917C5 /* Command.swift in Sources */,
 				E9044BBC1E3CEA07002917C5 /* String+Path.swift in Sources */,
-				E9044B9E1E3CE9FB002917C5 /* XTypedNotification.swift in Sources */,
+				E9044B9E1E3CE9FB002917C5 /* TypedNotification.swift in Sources */,
 				E9044BB81E3CEA07002917C5 /* String+Matches.swift in Sources */,
-				E9044B5E1E3CE9FB002917C5 /* XStack.swift in Sources */,
+				E9044B5E1E3CE9FB002917C5 /* Stack.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

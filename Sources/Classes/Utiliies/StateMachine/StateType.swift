@@ -1,5 +1,5 @@
 //
-//  XStateType.swift
+//  StateType.swift
 //  ExtAppKit
 //
 //  Created by Bonk, Thomas on 13.02.17.
@@ -11,4 +11,4 @@ import Foundation
 /*!
     This protocol must be implemented by every state type.
  */
-public protocol XStateType: Hashable {}
+public protocol StateType: Hashable {}
