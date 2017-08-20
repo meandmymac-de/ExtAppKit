@@ -14,9 +14,9 @@ public typealias ThisClosure = ((DoThis) -> Void)
 public class Do {
 
     @discardableResult
-    public static func this(name: String? = nil, on queue: DispatchQueue = .main, do this: @escaping ThisClosure) -> DoThis {
+    public static func this(name: String? = nil, on queue: DispatchQueue = .main, _ this: @escaping ThisClosure) -> DoThis {
 
-        let first = DoThis(name: name, on: queue, index: 0, do: this)
+        let first = DoThis(name: name, on: queue, index: 0, this)
         queue.async {
             first.doThis(first)
         }
@@ -40,7 +40,7 @@ public class DoThis {
     fileprivate var catchThis: ThisClosure?
     fileprivate var finallyThis: ThisClosure?
 
-    fileprivate init(name: String?, on queue: DispatchQueue, index: Int, do this: @escaping ThisClosure) {
+    fileprivate init(name: String?, on queue: DispatchQueue, index: Int, _ this: @escaping ThisClosure) {
         self.name = name
         self.index = index
         self.onQueue = queue
@@ -77,7 +77,7 @@ public class DoThis {
         }
     }
 
-    public func then(name: String? = nil, on queue: DispatchQueue? = nil, do this: @escaping ThisClosure) -> DoThis {
+    public func then(name: String? = nil, on queue: DispatchQueue? = nil, _ this: @escaping ThisClosure) -> DoThis {
 
         guard self.catchThis == nil else {
             fatalError("Can't call next() after catch()")
@@ -85,20 +85,20 @@ public class DoThis {
 
         let queue = queue ?? self.onQueue
 
-        let next = DoThis(name: name, on: queue, index: self.index + 1, do: this)
+        let next = DoThis(name: name, on: queue, index: self.index + 1, this)
         self.next = next
 
         return next
     }
 
     @discardableResult
-    public func `catch`(this: @escaping ThisClosure) -> DoThis {
+    public func `catch`(_ this: @escaping ThisClosure) -> DoThis {
 
         self.catchThis = this
         return self
     }
 
-    public func finally(this: @escaping ThisClosure) {
+    public func finally(_ this: @escaping ThisClosure) {
 
         self.finallyThis = this
     }
