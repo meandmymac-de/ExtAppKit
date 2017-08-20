@@ -105,6 +105,10 @@
 		E9044BBF1E3CEA15002917C5 /* Operators.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9044BBD1E3CEA15002917C5 /* Operators.swift */; };
 		E9044BC01E3CEA15002917C5 /* Operators.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9044BBD1E3CEA15002917C5 /* Operators.swift */; };
 		E9044BC11E3CEA15002917C5 /* Operators.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9044BBD1E3CEA15002917C5 /* Operators.swift */; };
+		E94B91D11F49F0B1009CBF37 /* Optional.swift in Sources */ = {isa = PBXBuildFile; fileRef = E94B91D01F49F0B1009CBF37 /* Optional.swift */; };
+		E94B91D21F49F0B1009CBF37 /* Optional.swift in Sources */ = {isa = PBXBuildFile; fileRef = E94B91D01F49F0B1009CBF37 /* Optional.swift */; };
+		E94B91D31F49F0B1009CBF37 /* Optional.swift in Sources */ = {isa = PBXBuildFile; fileRef = E94B91D01F49F0B1009CBF37 /* Optional.swift */; };
+		E94B91D41F49F0B1009CBF37 /* Optional.swift in Sources */ = {isa = PBXBuildFile; fileRef = E94B91D01F49F0B1009CBF37 /* Optional.swift */; };
 		E95B7ACA1E70AE19000A905E /* ApplicationServicesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E95B7AC91E70AE19000A905E /* ApplicationServicesManager.swift */; };
 /* End PBXBuildFile section */
 
@@ -152,6 +156,7 @@
 		E9044BA71E3CEA07002917C5 /* String+Matches.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Matches.swift"; sourceTree = "<group>"; };
 		E9044BA81E3CEA07002917C5 /* String+Path.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Path.swift"; sourceTree = "<group>"; };
 		E9044BBD1E3CEA15002917C5 /* Operators.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Operators.swift; sourceTree = "<group>"; };
+		E94B91D01F49F0B1009CBF37 /* Optional.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Optional.swift; sourceTree = "<group>"; };
 		E95B7AC91E70AE19000A905E /* ApplicationServicesManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApplicationServicesManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -297,6 +302,7 @@
 				E9044B581E3CE9FB002917C5 /* StreamReader.swift */,
 				E9044B591E3CE9FB002917C5 /* TypedNotification.swift */,
 				E9044B5A1E3CE9FB002917C5 /* UserSettings.swift */,
+				E94B91D01F49F0B1009CBF37 /* Optional.swift */,
 			);
 			path = Utiliies;
 			sourceTree = "<group>";
@@ -552,6 +558,7 @@
 				E9044BA91E3CEA07002917C5 /* NSDate+StringFormat.swift in Sources */,
 				E9044B931E3CE9FB002917C5 /* QueueExecution.swift in Sources */,
 				E9044B8F1E3CE9FB002917C5 /* I18N.swift in Sources */,
+				E94B91D11F49F0B1009CBF37 /* Optional.swift in Sources */,
 				E9044B5F1E3CE9FB002917C5 /* Logger.swift in Sources */,
 				E9044B671E3CE9FB002917C5 /* CommandBus.swift in Sources */,
 				E9044B9F1E3CE9FB002917C5 /* UserSettings.swift in Sources */,
@@ -592,6 +599,7 @@
 				E9044B841E3CE9FB002917C5 /* AssociatedObjects.swift in Sources */,
 				E9044BBF1E3CEA15002917C5 /* Operators.swift in Sources */,
 				E9044B701E3CE9FB002917C5 /* DoThis.swift in Sources */,
+				E94B91D21F49F0B1009CBF37 /* Optional.swift in Sources */,
 				B361DA8B1E518CBA00CA2848 /* StateType.swift in Sources */,
 				E9044B6C1E3CE9FB002917C5 /* CommandBusError.swift in Sources */,
 				B3F426D51E51D5F2001B5849 /* StateMachineTransition.swift in Sources */,
@@ -623,6 +631,7 @@
 				E9044B851E3CE9FB002917C5 /* AssociatedObjects.swift in Sources */,
 				E9044BC01E3CEA15002917C5 /* Operators.swift in Sources */,
 				E9044B711E3CE9FB002917C5 /* DoThis.swift in Sources */,
+				E94B91D31F49F0B1009CBF37 /* Optional.swift in Sources */,
 				B361DA8C1E518CBA00CA2848 /* StateType.swift in Sources */,
 				E9044B6D1E3CE9FB002917C5 /* CommandBusError.swift in Sources */,
 				B3F426D61E51D5F2001B5849 /* StateMachineTransition.swift in Sources */,
@@ -654,6 +663,7 @@
 				E9044B861E3CE9FB002917C5 /* AssociatedObjects.swift in Sources */,
 				E9044BC11E3CEA15002917C5 /* Operators.swift in Sources */,
 				E9044B721E3CE9FB002917C5 /* DoThis.swift in Sources */,
+				E94B91D41F49F0B1009CBF37 /* Optional.swift in Sources */,
 				B361DA8D1E518CBA00CA2848 /* StateType.swift in Sources */,
 				E9044B6E1E3CE9FB002917C5 /* CommandBusError.swift in Sources */,
 				B3F426D71E51D5F2001B5849 /* StateMachineTransition.swift in Sources */,
