@@ -49,6 +49,7 @@ public class Optional<T> {
         return self
     }
     
+    @discardableResult
     public func `else`(_ closure: () -> ()) -> Optional<T> {
         
         guard !self.isPresent else {
