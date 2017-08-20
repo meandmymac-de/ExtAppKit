@@ -38,6 +38,7 @@ public class Optional<T> {
     
     // MARK: Public Methods
     
+    @discardableResult
     public func ifPresent(_ closure: (T) -> ()) -> Optional<T> {
         
         guard self.isPresent else {
@@ -48,6 +49,7 @@ public class Optional<T> {
         return self
     }
     
+    @discardableResult
     public func orElse(_ newObject: T) -> Optional<T> {
         guard !self.isPresent else {
             return self
@@ -57,6 +59,7 @@ public class Optional<T> {
         return self
     }
     
+    @discardableResult
     public func orElseGet(_ closure: () -> T) -> Optional<T> {
         guard !self.isPresent else {
             return self
