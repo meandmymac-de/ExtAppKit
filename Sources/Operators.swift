@@ -33,3 +33,14 @@ public func =?<T> ( left: inout T, right: T?) -> () {
     
     leave()
 }
+
+
+public func ?? (condition: Bool, closure: () -> ()) {
+    enter()
+    
+    if (condition) {
+        closure()
+    }
+    
+    leave()
+}
