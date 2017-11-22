@@ -69,6 +69,13 @@ open class CommandBus {
 
         return CommandBus._instance
     }
+    
+    
+    // MARK: Initialization for local command bus
+    
+    public init() {
+        
+    }
 
 
     // MARK: Public Methods
