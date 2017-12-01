@@ -347,7 +347,7 @@ public class StateMachine<S: StateType, E: EventType> {
     @param right
                 A tupel consisting of two state with (fromState, toState).
  */
-public func +=<S: StateType, E: EventType>(left: StateMachine<S, E>, right: (S, S)) throws {
+public func +=<S, E>(left: StateMachine<S, E>, right: (S, S)) throws {
     enter()
     
     let (fromState, toState) = right
@@ -367,7 +367,7 @@ public func +=<S: StateType, E: EventType>(left: StateMachine<S, E>, right: (S, 
     @param right
                 A tupel consisting of two state with (event, fromState, toState).
  */
-public func +=<S: StateType, E: EventType>(left: StateMachine<S, E>, right: (E, S, S)) throws {
+public func +=<S, E>(left: StateMachine<S, E>, right: (E, S, S)) throws {
     enter()
 
     let (event, fromState, toState) = right
@@ -397,7 +397,7 @@ infix operator <+>
                 The new state of the state machine.
  */
 
-public func =><S: StateType, E: EventType>(left: StateMachine<S, E>, right: S) throws {
+public func =><S, E>(left: StateMachine<S, E>, right: S) throws {
     enter()
 
     try left.tryTransition(toState: right)
@@ -415,13 +415,13 @@ public func =><S: StateType, E: EventType>(left: StateMachine<S, E>, right: S) t
                 The state machinw to to which the state transition shall be
                 applied.
  */
-public func =><S: StateType, E: EventType>(left: E, right: StateMachine<S, E>) throws {
+public func =><S, E>(left: E, right: StateMachine<S, E>) throws {
     enter()
 
     try right.tryEvent(left)
 }
 
-public func >+<S: StateType, E: EventType>(left: (StateMachine<S, E>, S), right: @escaping StateMachine<S, E>.TransitionHandler) {
+public func >+<S, E>(left: (StateMachine<S, E>, S), right: @escaping StateMachine<S, E>.TransitionHandler) {
     enter()
     
     let (stateMachine, state) = left
@@ -429,7 +429,7 @@ public func >+<S: StateType, E: EventType>(left: (StateMachine<S, E>, S), right:
     stateMachine.addEnterStateHandler(state: state, handler: right)
 }
 
-public func +><S: StateType, E: EventType>(left: (StateMachine<S, E>, S), right: @escaping StateMachine<S, E>.TransitionHandler) {
+public func +><S, E>(left: (StateMachine<S, E>, S), right: @escaping StateMachine<S, E>.TransitionHandler) {
     enter()
     
     let (stateMachine, state) = left
@@ -437,7 +437,7 @@ public func +><S: StateType, E: EventType>(left: (StateMachine<S, E>, S), right:
     stateMachine.addLeaveStateHandler(state: state, handler: right)
 }
 
-public func <+><S: StateType, E: EventType>(left: (StateMachine<S, E>, E), right: @escaping StateMachine<S, E>.TransitionHandler) {
+public func <+><S, E>(left: (StateMachine<S, E>, E), right: @escaping StateMachine<S, E>.TransitionHandler) {
     enter()
     
     let (stateMachine, event) = left
