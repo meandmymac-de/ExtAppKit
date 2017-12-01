@@ -1,0 +1,4 @@
+language: swift
+osx_image: xcode9.1
+script: 
+    xcodebuild clean build -project ExtAppKit.xcodeproj -scheme ExtAppKit-macOS -sdk macosx -destination arch=x86_64 -configuration Debug ONLY_ACTIVE_ARCH=N
