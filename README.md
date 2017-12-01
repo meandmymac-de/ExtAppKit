@@ -1,5 +1,7 @@
 # ExtAppKit
 
+[![Build Status](https://travis-ci.org/meandmymac-de/ExtAppKit.svg?branch=master)](https://travis-ci.org/meandmymac-de/ExtAppKit)
+
 ## Third party sources
 
 ### [Do.this](https://github.com/BarakRL/Do.this)
