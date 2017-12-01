@@ -73,10 +73,6 @@
 		E9044B981E3CE9FB002917C5 /* StreamReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9044B581E3CE9FB002917C5 /* StreamReader.swift */; };
 		E9044B991E3CE9FB002917C5 /* StreamReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9044B581E3CE9FB002917C5 /* StreamReader.swift */; };
 		E9044B9A1E3CE9FB002917C5 /* StreamReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9044B581E3CE9FB002917C5 /* StreamReader.swift */; };
-		E9044B9B1E3CE9FB002917C5 /* TypedNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9044B591E3CE9FB002917C5 /* TypedNotification.swift */; };
-		E9044B9C1E3CE9FB002917C5 /* TypedNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9044B591E3CE9FB002917C5 /* TypedNotification.swift */; };
-		E9044B9D1E3CE9FB002917C5 /* TypedNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9044B591E3CE9FB002917C5 /* TypedNotification.swift */; };
-		E9044B9E1E3CE9FB002917C5 /* TypedNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9044B591E3CE9FB002917C5 /* TypedNotification.swift */; };
 		E9044B9F1E3CE9FB002917C5 /* UserSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9044B5A1E3CE9FB002917C5 /* UserSettings.swift */; };
 		E9044BA01E3CE9FB002917C5 /* UserSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9044B5A1E3CE9FB002917C5 /* UserSettings.swift */; };
 		E9044BA11E3CE9FB002917C5 /* UserSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9044B5A1E3CE9FB002917C5 /* UserSettings.swift */; };
@@ -148,7 +144,6 @@
 		E9044B561E3CE9FB002917C5 /* I18N.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = I18N.swift; sourceTree = "<group>"; };
 		E9044B571E3CE9FB002917C5 /* QueueExecution.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QueueExecution.swift; sourceTree = "<group>"; };
 		E9044B581E3CE9FB002917C5 /* StreamReader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StreamReader.swift; sourceTree = "<group>"; };
-		E9044B591E3CE9FB002917C5 /* TypedNotification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TypedNotification.swift; sourceTree = "<group>"; };
 		E9044B5A1E3CE9FB002917C5 /* UserSettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserSettings.swift; sourceTree = "<group>"; };
 		E9044BA41E3CEA07002917C5 /* NSDate+StringFormat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSDate+StringFormat.swift"; sourceTree = "<group>"; };
 		E9044BA51E3CEA07002917C5 /* NSDate+StripDate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSDate+StripDate.swift"; sourceTree = "<group>"; };
@@ -300,7 +295,6 @@
 				E9044B561E3CE9FB002917C5 /* I18N.swift */,
 				E9044B571E3CE9FB002917C5 /* QueueExecution.swift */,
 				E9044B581E3CE9FB002917C5 /* StreamReader.swift */,
-				E9044B591E3CE9FB002917C5 /* TypedNotification.swift */,
 				E9044B5A1E3CE9FB002917C5 /* UserSettings.swift */,
 				E94B91D01F49F0B1009CBF37 /* Optional.swift */,
 			);
@@ -577,7 +571,6 @@
 				E9044B871E3CE9FB002917C5 /* Cache.swift in Sources */,
 				E9044B631E3CE9FB002917C5 /* Command.swift in Sources */,
 				E9044BB91E3CEA07002917C5 /* String+Path.swift in Sources */,
-				E9044B9B1E3CE9FB002917C5 /* TypedNotification.swift in Sources */,
 				E9044BB51E3CEA07002917C5 /* String+Matches.swift in Sources */,
 				E9044B5B1E3CE9FB002917C5 /* Stack.swift in Sources */,
 				E95B7ACA1E70AE19000A905E /* ApplicationServicesManager.swift in Sources */,
@@ -610,7 +603,6 @@
 				E9044B881E3CE9FB002917C5 /* Cache.swift in Sources */,
 				E9044B641E3CE9FB002917C5 /* Command.swift in Sources */,
 				E9044BBA1E3CEA07002917C5 /* String+Path.swift in Sources */,
-				E9044B9C1E3CE9FB002917C5 /* TypedNotification.swift in Sources */,
 				E9044BB61E3CEA07002917C5 /* String+Matches.swift in Sources */,
 				E9044B5C1E3CE9FB002917C5 /* Stack.swift in Sources */,
 			);
@@ -642,7 +634,6 @@
 				E9044B891E3CE9FB002917C5 /* Cache.swift in Sources */,
 				E9044B651E3CE9FB002917C5 /* Command.swift in Sources */,
 				E9044BBB1E3CEA07002917C5 /* String+Path.swift in Sources */,
-				E9044B9D1E3CE9FB002917C5 /* TypedNotification.swift in Sources */,
 				E9044BB71E3CEA07002917C5 /* String+Matches.swift in Sources */,
 				E9044B5D1E3CE9FB002917C5 /* Stack.swift in Sources */,
 			);
@@ -674,7 +665,6 @@
 				E9044B8A1E3CE9FB002917C5 /* Cache.swift in Sources */,
 				E9044B661E3CE9FB002917C5 /* Command.swift in Sources */,
 				E9044BBC1E3CEA07002917C5 /* String+Path.swift in Sources */,
-				E9044B9E1E3CE9FB002917C5 /* TypedNotification.swift in Sources */,
 				E9044BB81E3CEA07002917C5 /* String+Matches.swift in Sources */,
 				E9044B5E1E3CE9FB002917C5 /* Stack.swift in Sources */,
 			);
