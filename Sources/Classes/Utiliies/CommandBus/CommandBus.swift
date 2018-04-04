@@ -164,4 +164,23 @@ open class CommandBus {
             leave()
         }
     }
+    
+    open func callHandler(for command: Command) {
+        enter()
+        
+        let mirror = Mirror(reflecting: command.self)
+        let commandId = String(describing: mirror.subjectType)
+        
+        if let handlers = self._commandHandlerDirectory[commandId] {
+            
+            for handler in handlers {
+                
+                handler.1(command)
+            }
+        }
+        
+        defer {
+            leave()
+        }
+    }
 }
