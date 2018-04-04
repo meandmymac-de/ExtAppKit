@@ -165,7 +165,7 @@ open class CommandBus {
         }
     }
     
-    open func callHandler(for command: Command) {
+    open func callHandler(forCommand command: Command) {
         enter()
         
         let mirror = Mirror(reflecting: command.self)
