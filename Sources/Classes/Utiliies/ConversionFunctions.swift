@@ -54,7 +54,7 @@ public func fractionFromFloat(_ f: Float) -> String {
             denominator = denominator / 30;
         }
 
-        if result.characters.count > 0 {
+        if result.count > 0 {
             result.append(" \(nominator)/\(denominator)")
         }
         else {

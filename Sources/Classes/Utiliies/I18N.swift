@@ -23,7 +23,7 @@ public func I18N(_ string: String) -> String {
 
     translatedString = NSLocalizedString(string, tableName: nil, comment: "")
 
-    if translatedString.characters.count == 0 {
+    if translatedString.count == 0 {
 
         translatedString = string
     }

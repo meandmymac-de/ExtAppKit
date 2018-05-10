@@ -89,7 +89,7 @@ open class CommandBus {
         }
 
         let mirror = Mirror(reflecting: command)
-        let commandId = String(describing: mirror.subjectType).characters.split{$0 == "."}.map(String.init)[0]
+        let commandId = String(describing: mirror.subjectType).split{$0 == "."}.map(String.init)[0]
         var handlers: Array<CommandHandlerTuple>? = nil
 
         if self._commandHandlerDirectory.keys.contains(commandId) {
@@ -118,7 +118,7 @@ open class CommandBus {
         }
 
         let mirror = Mirror(reflecting: command)
-        let commandId = String(describing: mirror.subjectType).characters.split{$0 == "."}.map(String.init)[0]
+        let commandId = String(describing: mirror.subjectType).split{$0 == "."}.map(String.init)[0]
 
         guard self._commandHandlerDirectory.keys.contains(commandId) else {
 
