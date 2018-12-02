@@ -19,19 +19,16 @@ public extension Date {
 
         :returns: The given date without the date components.
      */
-    public static func timeWithoutDate(_ date: Date? = nil) -> Date {
+    public static func time(_ date: Date? = nil) -> Time {
         enter()
 
         let d = date == nil ? Date() : date!
-        let flags = NSCalendar.Unit(rawValue: NSCalendar.Unit.hour.rawValue | NSCalendar.Unit.minute.rawValue | NSCalendar.Unit.second.rawValue)
-        let calendar = Calendar.current
-        let componentsDate = (calendar as NSCalendar).components(flags, from: d)
-        let dateWithoutTime = calendar.date(from: componentsDate)
+        let time = Time(fromDate: d)
 
         defer {
             leave()
         }
-        return dateWithoutTime!
+        return time
     }
 
     /**
@@ -39,12 +36,12 @@ public extension Date {
 
      :returns: The date without the time components.
      */
-    public func timeWithoutDate() -> Date {
+    public func time() -> Time {
         enter()
         defer {
             leave()
         }
-        return Date.dateWithoutTime(self)
+        return Date.time(self)
     }
 
 }

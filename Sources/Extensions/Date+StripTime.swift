@@ -13,6 +13,19 @@ import Foundation
     Useful extensions to the NSDate class.
 */
 public extension Date {
+    
+    var startOfDay: Date {
+        return Calendar.current.startOfDay(for: self)
+    }
+    
+    var endOfDay: Date {
+        var components = DateComponents()
+        
+        components.day = 1
+        components.second = -1
+        
+        return Calendar.current.date(byAdding: components, to: startOfDay)!
+    }
 
     /**
         Returns the given date without the time components.
@@ -25,10 +38,9 @@ public extension Date {
         enter()
 
         let d = date == nil ? Date() : date!
-        let flags = NSCalendar.Unit(rawValue: NSCalendar.Unit.year.rawValue | NSCalendar.Unit.month.rawValue | NSCalendar.Unit.day.rawValue)
         let calendar = Calendar.current
-        let componentsDate = (calendar as NSCalendar).components(flags, from: d)
-        let dateWithoutTime = calendar.date(from: componentsDate)
+        let components = calendar.dateComponents([.day, .month, .year], from: d)
+        let dateWithoutTime = components.date
 
         defer {
             leave()
