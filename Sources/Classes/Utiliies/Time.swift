@@ -55,26 +55,26 @@ open class Time: Hashable, Comparable {
     // MARK: - Calculation
     
     /// Returns a `Date` with a specified amount of time added to it.
-    public static func + (lhs: Time, rhs: Time) -> Time {
-        return Time(fromDate: ((Date().startOfDay + lhs.timeIntervall) + rhs.timeIntervall))
+    public static func + (lhs: Time, rhs: TimeInterval) -> Time {
+        return Time(fromDate: ((Date().startOfDay + lhs.timeIntervall) + rhs))
     }
     
     /// Returns a `Date` with a specified amount of time subtracted from it.
-    public static func - (lhs: Time, rhs: Time) -> Time {
-        return Time(fromDate: ((Date().startOfDay + lhs.timeIntervall) - rhs.timeIntervall))
+    public static func - (lhs: Time, rhs: TimeInterval) -> Time {
+        return Time(fromDate: ((Date().startOfDay + lhs.timeIntervall) - rhs))
     }
     
     /// Add a `TimeInterval` to a `Date`.
     ///
     /// - warning: This only adjusts an absolute value. If you wish to add calendrical concepts like hours, days, months then you must use a `Calendar`. That will take into account complexities like daylight saving time, months with different numbers of days, and more.
-    public static func += (lhs: inout Time, rhs: Time) {
+    public static func += (lhs: inout Time, rhs: TimeInterval) {
         lhs = lhs + rhs
     }
     
     /// Subtract a `TimeInterval` from a `Date`.
     ///
     /// - warning: This only adjusts an absolute value. If you wish to add calendrical concepts like hours, days, months then you must use a `Calendar`. That will take into account complexities like daylight saving time, months with different numbers of days, and more.
-    public static func -= (lhs: inout Time, rhs: Time) {
+    public static func -= (lhs: inout Time, rhs: TimeInterval) {
         lhs = lhs - rhs
     }
     
