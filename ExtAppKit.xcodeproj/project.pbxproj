@@ -114,6 +114,7 @@
 		E9A82A3920A45F270065FB5B /* String+ToClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9A82A3720A45F270065FB5B /* String+ToClass.swift */; };
 		E9A82A3A20A45F270065FB5B /* String+ToClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9A82A3720A45F270065FB5B /* String+ToClass.swift */; };
 		E9A82A3B20A45F270065FB5B /* String+ToClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9A82A3720A45F270065FB5B /* String+ToClass.swift */; };
+		E9F2598721BDA01000E063D2 /* Date+Timezone.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9F2598621BDA01000E063D2 /* Date+Timezone.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -163,6 +164,7 @@
 		E94B91D01F49F0B1009CBF37 /* Optional.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Optional.swift; sourceTree = "<group>"; };
 		E95B7AC91E70AE19000A905E /* ApplicationServicesManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApplicationServicesManager.swift; sourceTree = "<group>"; };
 		E9A82A3720A45F270065FB5B /* String+ToClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+ToClass.swift"; sourceTree = "<group>"; };
+		E9F2598621BDA01000E063D2 /* Date+Timezone.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Timezone.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -331,6 +333,7 @@
 				E9044BA71E3CEA07002917C5 /* String+Matches.swift */,
 				E9044BA81E3CEA07002917C5 /* String+Path.swift */,
 				E9A82A3720A45F270065FB5B /* String+ToClass.swift */,
+				E9F2598621BDA01000E063D2 /* Date+Timezone.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -572,6 +575,7 @@
 				E91B818A21B42AA6006C4A7D /* Time.swift in Sources */,
 				E9044B9F1E3CE9FB002917C5 /* UserSettings.swift in Sources */,
 				E9044BAD1E3CEA07002917C5 /* Date+StripDate.swift in Sources */,
+				E9F2598721BDA01000E063D2 /* Date+Timezone.swift in Sources */,
 				E9044B971E3CE9FB002917C5 /* StreamReader.swift in Sources */,
 				E9044B831E3CE9FB002917C5 /* AssociatedObjects.swift in Sources */,
 				E9044BBE1E3CEA15002917C5 /* Operators.swift in Sources */,
