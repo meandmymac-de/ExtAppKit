@@ -115,6 +115,9 @@
 		E9A82A3A20A45F270065FB5B /* String+ToClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9A82A3720A45F270065FB5B /* String+ToClass.swift */; };
 		E9A82A3B20A45F270065FB5B /* String+ToClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9A82A3720A45F270065FB5B /* String+ToClass.swift */; };
 		E9F2598721BDA01000E063D2 /* Date+Timezone.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9F2598621BDA01000E063D2 /* Date+Timezone.swift */; };
+		E9F2598821BDA2FE00E063D2 /* Date+Timezone.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9F2598621BDA01000E063D2 /* Date+Timezone.swift */; };
+		E9F2598921BDA30500E063D2 /* Date+Timezone.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9F2598621BDA01000E063D2 /* Date+Timezone.swift */; };
+		E9F2598A21BDA30C00E063D2 /* Date+Timezone.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9F2598621BDA01000E063D2 /* Date+Timezone.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -575,10 +578,10 @@
 				E91B818A21B42AA6006C4A7D /* Time.swift in Sources */,
 				E9044B9F1E3CE9FB002917C5 /* UserSettings.swift in Sources */,
 				E9044BAD1E3CEA07002917C5 /* Date+StripDate.swift in Sources */,
-				E9F2598721BDA01000E063D2 /* Date+Timezone.swift in Sources */,
 				E9044B971E3CE9FB002917C5 /* StreamReader.swift in Sources */,
 				E9044B831E3CE9FB002917C5 /* AssociatedObjects.swift in Sources */,
 				E9044BBE1E3CEA15002917C5 /* Operators.swift in Sources */,
+				E9F2598721BDA01000E063D2 /* Date+Timezone.swift in Sources */,
 				E9044B6F1E3CE9FB002917C5 /* DoThis.swift in Sources */,
 				B361DA8A1E518CBA00CA2848 /* StateType.swift in Sources */,
 				E9044B6B1E3CE9FB002917C5 /* CommandBusError.swift in Sources */,
@@ -613,6 +616,7 @@
 				E9044BBF1E3CEA15002917C5 /* Operators.swift in Sources */,
 				E9044B701E3CE9FB002917C5 /* DoThis.swift in Sources */,
 				E94B91D21F49F0B1009CBF37 /* Optional.swift in Sources */,
+				E9F2598821BDA2FE00E063D2 /* Date+Timezone.swift in Sources */,
 				B361DA8B1E518CBA00CA2848 /* StateType.swift in Sources */,
 				E9044B6C1E3CE9FB002917C5 /* CommandBusError.swift in Sources */,
 				B3F426D51E51D5F2001B5849 /* StateMachineTransition.swift in Sources */,
@@ -645,6 +649,7 @@
 				E9044B851E3CE9FB002917C5 /* AssociatedObjects.swift in Sources */,
 				E9044BC01E3CEA15002917C5 /* Operators.swift in Sources */,
 				E9044B711E3CE9FB002917C5 /* DoThis.swift in Sources */,
+				E9F2598921BDA30500E063D2 /* Date+Timezone.swift in Sources */,
 				E94B91D31F49F0B1009CBF37 /* Optional.swift in Sources */,
 				B361DA8C1E518CBA00CA2848 /* StateType.swift in Sources */,
 				E9044B6D1E3CE9FB002917C5 /* CommandBusError.swift in Sources */,
@@ -676,6 +681,7 @@
 				E91B818D21B42F2C006C4A7D /* Time.swift in Sources */,
 				E9044B9A1E3CE9FB002917C5 /* StreamReader.swift in Sources */,
 				E9044B861E3CE9FB002917C5 /* AssociatedObjects.swift in Sources */,
+				E9F2598A21BDA30C00E063D2 /* Date+Timezone.swift in Sources */,
 				E9044BC11E3CEA15002917C5 /* Operators.swift in Sources */,
 				E9044B721E3CE9FB002917C5 /* DoThis.swift in Sources */,
 				E94B91D41F49F0B1009CBF37 /* Optional.swift in Sources */,
