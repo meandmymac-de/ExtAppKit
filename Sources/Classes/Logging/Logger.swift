@@ -419,7 +419,7 @@ open class Logger {
                       lineNumber: Int) -> String {
 
        //
-       return "[\(timestamp)] [\(logLevel)] [\(area)] [\(message)] [\(functionName)] [\(fileName)] [\(lineNumber)]"
+        return "[\(timestamp)] [\(logLevel)] [\(area)] [\(message)] [\(functionName):\(fileName):\(lineNumber)]"
     }
 
     fileprivate func write(_ message: String) {
