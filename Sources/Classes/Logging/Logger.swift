@@ -87,6 +87,13 @@ public typealias LogFormatter = (_ logLevel: LogLevel,
 public typealias LogWriter = (_ message: String) -> ()
 
 
+/**
+    Get the Type name of an object
+ */
+public func TypeName(of obj: Any) -> String {
+    return String(describing: type(of: obj))
+}
+
 
 open class Logger {
 
