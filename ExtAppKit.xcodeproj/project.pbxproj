@@ -110,6 +110,9 @@
 		E94B91D31F49F0B1009CBF37 /* Optional.swift in Sources */ = {isa = PBXBuildFile; fileRef = E94B91D01F49F0B1009CBF37 /* Optional.swift */; };
 		E94B91D41F49F0B1009CBF37 /* Optional.swift in Sources */ = {isa = PBXBuildFile; fileRef = E94B91D01F49F0B1009CBF37 /* Optional.swift */; };
 		E95B7ACA1E70AE19000A905E /* ApplicationServicesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E95B7AC91E70AE19000A905E /* ApplicationServicesManager.swift */; };
+		E96D0870235B327400A04A1F /* ApplicationServicesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E95B7AC91E70AE19000A905E /* ApplicationServicesManager.swift */; };
+		E96D0872235B335B00A04A1F /* ApplicationServicesManager+iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96D0871235B335B00A04A1F /* ApplicationServicesManager+iOS.swift */; };
+		E96D0874235B342F00A04A1F /* PluggableApplicationDelegate+macOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96D0873235B342F00A04A1F /* PluggableApplicationDelegate+macOS.swift */; };
 		E9A82A3820A45F270065FB5B /* String+ToClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9A82A3720A45F270065FB5B /* String+ToClass.swift */; };
 		E9A82A3920A45F270065FB5B /* String+ToClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9A82A3720A45F270065FB5B /* String+ToClass.swift */; };
 		E9A82A3A20A45F270065FB5B /* String+ToClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9A82A3720A45F270065FB5B /* String+ToClass.swift */; };
@@ -166,6 +169,8 @@
 		E91B818921B42AA6006C4A7D /* Time.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Time.swift; sourceTree = "<group>"; };
 		E94B91D01F49F0B1009CBF37 /* Optional.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Optional.swift; sourceTree = "<group>"; };
 		E95B7AC91E70AE19000A905E /* ApplicationServicesManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApplicationServicesManager.swift; sourceTree = "<group>"; };
+		E96D0871235B335B00A04A1F /* ApplicationServicesManager+iOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ApplicationServicesManager+iOS.swift"; sourceTree = "<group>"; };
+		E96D0873235B342F00A04A1F /* PluggableApplicationDelegate+macOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PluggableApplicationDelegate+macOS.swift"; sourceTree = "<group>"; };
 		E9A82A3720A45F270065FB5B /* String+ToClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+ToClass.swift"; sourceTree = "<group>"; };
 		E9F2598621BDA01000E063D2 /* Date+Timezone.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Timezone.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -304,6 +309,8 @@
 				B361DA831E518C3000CA2848 /* StateMachine */,
 				E9044B4D1E3CE9FB002917C5 /* DoThis.swift */,
 				E95B7AC91E70AE19000A905E /* ApplicationServicesManager.swift */,
+				E96D0871235B335B00A04A1F /* ApplicationServicesManager+iOS.swift */,
+				E96D0873235B342F00A04A1F /* PluggableApplicationDelegate+macOS.swift */,
 				E9044B531E3CE9FB002917C5 /* AssociatedObjects.swift */,
 				E9044B541E3CE9FB002917C5 /* Cache.swift */,
 				E9044B551E3CE9FB002917C5 /* ConversionFunctions.swift */,
@@ -472,7 +479,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0820;
-				LastUpgradeCheck = 0930;
+				LastUpgradeCheck = 1110;
 				ORGANIZATIONNAME = "Thomas Bonk Softwareentwicklung";
 				TargetAttributes = {
 					B361DA961E518DCD00CA2848 = {
@@ -486,7 +493,7 @@
 					};
 					BBB55AD31C8F88F20050DDA9 = {
 						CreatedOnToolsVersion = 7.3;
-						LastSwiftMigration = 0930;
+						LastSwiftMigration = 1110;
 					};
 					BBB55AF01C8F8BE00050DDA9 = {
 						CreatedOnToolsVersion = 7.3;
@@ -498,10 +505,11 @@
 			};
 			buildConfigurationList = BBB55AAC1C8F80020050DDA9 /* Build configuration list for PBXProject "ExtAppKit" */;
 			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = BBB55AA81C8F80020050DDA9;
 			productRefGroup = BBB55AB31C8F80020050DDA9 /* Products */;
@@ -596,6 +604,7 @@
 				E9044BB51E3CEA07002917C5 /* String+Matches.swift in Sources */,
 				E9044B5B1E3CE9FB002917C5 /* Stack.swift in Sources */,
 				E95B7ACA1E70AE19000A905E /* ApplicationServicesManager.swift in Sources */,
+				E96D0872235B335B00A04A1F /* ApplicationServicesManager+iOS.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -603,19 +612,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E96D0870235B327400A04A1F /* ApplicationServicesManager.swift in Sources */,
 				E9044BAA1E3CEA07002917C5 /* Date+StringFormat.swift in Sources */,
 				E9044B941E3CE9FB002917C5 /* QueueExecution.swift in Sources */,
 				E9044B901E3CE9FB002917C5 /* I18N.swift in Sources */,
 				E9044B601E3CE9FB002917C5 /* Logger.swift in Sources */,
+				E96D0874235B342F00A04A1F /* PluggableApplicationDelegate+macOS.swift in Sources */,
 				E9044B681E3CE9FB002917C5 /* CommandBus.swift in Sources */,
 				E9044BA01E3CE9FB002917C5 /* UserSettings.swift in Sources */,
 				E9044BAE1E3CEA07002917C5 /* Date+StripDate.swift in Sources */,
 				E9044B981E3CE9FB002917C5 /* StreamReader.swift in Sources */,
 				E9044B841E3CE9FB002917C5 /* AssociatedObjects.swift in Sources */,
 				E91B818B21B42F1F006C4A7D /* Time.swift in Sources */,
+				E94B91D21F49F0B1009CBF37 /* Optional.swift in Sources */,
 				E9044BBF1E3CEA15002917C5 /* Operators.swift in Sources */,
 				E9044B701E3CE9FB002917C5 /* DoThis.swift in Sources */,
-				E94B91D21F49F0B1009CBF37 /* Optional.swift in Sources */,
 				E9F2598821BDA2FE00E063D2 /* Date+Timezone.swift in Sources */,
 				B361DA8B1E518CBA00CA2848 /* StateType.swift in Sources */,
 				E9044B6C1E3CE9FB002917C5 /* CommandBusError.swift in Sources */,
@@ -752,6 +763,7 @@
 			baseConfigurationReference = BBB55ACC1C8F80660050DDA9 /* version.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -812,6 +824,7 @@
 			baseConfigurationReference = BBB55ACC1C8F80660050DDA9 /* version.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -864,7 +877,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				DEFINES_MODULE = YES;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -886,7 +899,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				DEFINES_MODULE = YES;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -920,7 +933,7 @@
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -940,7 +953,7 @@
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
