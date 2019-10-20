@@ -112,7 +112,7 @@
 		E95B7ACA1E70AE19000A905E /* ApplicationServicesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E95B7AC91E70AE19000A905E /* ApplicationServicesManager.swift */; };
 		E96D0870235B327400A04A1F /* ApplicationServicesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E95B7AC91E70AE19000A905E /* ApplicationServicesManager.swift */; };
 		E96D0872235B335B00A04A1F /* ApplicationServicesManager+iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96D0871235B335B00A04A1F /* ApplicationServicesManager+iOS.swift */; };
-		E96D0874235B342F00A04A1F /* PluggableApplicationDelegate+macOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96D0873235B342F00A04A1F /* PluggableApplicationDelegate+macOS.swift */; };
+		E96D0874235B342F00A04A1F /* ApplicationServicesManager+macOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96D0873235B342F00A04A1F /* ApplicationServicesManager+macOS.swift */; };
 		E9A82A3820A45F270065FB5B /* String+ToClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9A82A3720A45F270065FB5B /* String+ToClass.swift */; };
 		E9A82A3920A45F270065FB5B /* String+ToClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9A82A3720A45F270065FB5B /* String+ToClass.swift */; };
 		E9A82A3A20A45F270065FB5B /* String+ToClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9A82A3720A45F270065FB5B /* String+ToClass.swift */; };
@@ -170,7 +170,7 @@
 		E94B91D01F49F0B1009CBF37 /* Optional.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Optional.swift; sourceTree = "<group>"; };
 		E95B7AC91E70AE19000A905E /* ApplicationServicesManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApplicationServicesManager.swift; sourceTree = "<group>"; };
 		E96D0871235B335B00A04A1F /* ApplicationServicesManager+iOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ApplicationServicesManager+iOS.swift"; sourceTree = "<group>"; };
-		E96D0873235B342F00A04A1F /* PluggableApplicationDelegate+macOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PluggableApplicationDelegate+macOS.swift"; sourceTree = "<group>"; };
+		E96D0873235B342F00A04A1F /* ApplicationServicesManager+macOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ApplicationServicesManager+macOS.swift"; sourceTree = "<group>"; };
 		E9A82A3720A45F270065FB5B /* String+ToClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+ToClass.swift"; sourceTree = "<group>"; };
 		E9F2598621BDA01000E063D2 /* Date+Timezone.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Timezone.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -310,7 +310,7 @@
 				E9044B4D1E3CE9FB002917C5 /* DoThis.swift */,
 				E95B7AC91E70AE19000A905E /* ApplicationServicesManager.swift */,
 				E96D0871235B335B00A04A1F /* ApplicationServicesManager+iOS.swift */,
-				E96D0873235B342F00A04A1F /* PluggableApplicationDelegate+macOS.swift */,
+				E96D0873235B342F00A04A1F /* ApplicationServicesManager+macOS.swift */,
 				E9044B531E3CE9FB002917C5 /* AssociatedObjects.swift */,
 				E9044B541E3CE9FB002917C5 /* Cache.swift */,
 				E9044B551E3CE9FB002917C5 /* ConversionFunctions.swift */,
@@ -617,7 +617,7 @@
 				E9044B941E3CE9FB002917C5 /* QueueExecution.swift in Sources */,
 				E9044B901E3CE9FB002917C5 /* I18N.swift in Sources */,
 				E9044B601E3CE9FB002917C5 /* Logger.swift in Sources */,
-				E96D0874235B342F00A04A1F /* PluggableApplicationDelegate+macOS.swift in Sources */,
+				E96D0874235B342F00A04A1F /* ApplicationServicesManager+macOS.swift in Sources */,
 				E9044B681E3CE9FB002917C5 /* CommandBus.swift in Sources */,
 				E9044BA01E3CE9FB002917C5 /* UserSettings.swift in Sources */,
 				E9044BAE1E3CEA07002917C5 /* Date+StripDate.swift in Sources */,
