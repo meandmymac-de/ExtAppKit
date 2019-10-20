@@ -10,7 +10,7 @@
 import UIKit
 import CloudKit
 
-public extension PluggableApplicationDelegate: ApplicationDelegate {
+public extension PluggableApplicationDelegate {
     @available(iOS 2.0, *)
     public func applicationDidFinishLaunching(_ application: UIApplication) {
         for service in __services {

@@ -26,7 +26,7 @@ public typealias Window = UIWindow
 /// It doesn't add more functionalities yet.
 public protocol ApplicationService: ApplicationDelegate {}
 
-open class PluggableApplicationDelegate: NSObject {
+open class PluggableApplicationDelegate: NSObject, ApplicationDelegate {
     
     public var window: Window?
     
